@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		000FB11029D48B6800010128 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 000FB10F29D48B6800010128 /* RtcBasic */; };
 		000FB11329D48DD500010128 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 000FB11229D48DD500010128 /* AgoraRtmKit */; };
+		004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C41FF29DDB1A3000ECC93 /* AppRouter.swift */; };
+		004C420829E0272A000ECC93 /* CallFriendProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */; };
+		004C420A29E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C420929E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift */; };
+		004C421229E05C0E000ECC93 /* CallInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421129E05C0E000ECC93 /* CallInteractor.swift */; };
+		004C421529E065B2000ECC93 /* ContentViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421429E065B2000ECC93 /* ContentViewPresenter.swift */; };
+		004C421729E06FDB000ECC93 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421629E06FDB000ECC93 /* UserSetting.swift */; };
+		004C421929E07076000ECC93 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421829E07076000ECC93 /* LoginViewPresenter.swift */; };
+		004C421B29E07220000ECC93 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421A29E07220000ECC93 /* MainViewPresenter.swift */; };
+		004C421E29E076A1000ECC93 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 004C421D29E076A1000ECC93 /* AlertToast */; };
+		004C422029E07EB0000ECC93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421F29E07EB0000ECC93 /* Constants.swift */; };
 		0F0632BE27FDD93800B72652 /* CallFriendProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */; };
 		0F0632C027FDD93800B72652 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632BF27FDD93800B72652 /* ContentView.swift */; };
 		0F0632C227FDD93C00B72652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0632C127FDD93C00B72652 /* Assets.xcassets */; };
@@ -36,7 +46,27 @@
 		0FFF6457283939A500DE321C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF6455283939A500DE321C /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		004C420B29E0272A000ECC93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F0632B227FDD93800B72652 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F0632B927FDD93800B72652;
+			remoteInfo = CallFriendProject;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		004C41FF29DDB1A3000ECC93 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		004C420529E02729000ECC93 /* CallFriendProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallFriendProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectUITests.swift; sourceTree = "<group>"; };
+		004C420929E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		004C421129E05C0E000ECC93 /* CallInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInteractor.swift; sourceTree = "<group>"; };
+		004C421429E065B2000ECC93 /* ContentViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewPresenter.swift; sourceTree = "<group>"; };
+		004C421629E06FDB000ECC93 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
+		004C421829E07076000ECC93 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		004C421A29E07220000ECC93 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		004C421F29E07EB0000ECC93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F0632BA27FDD93800B72652 /* CallFriendProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallFriendProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectApp.swift; sourceTree = "<group>"; };
 		0F0632BF27FDD93800B72652 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,10 +96,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		004C420229E02729000ECC93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F0632B727FDD93800B72652 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				004C421E29E076A1000ECC93 /* AlertToast in Frameworks */,
 				000FB11329D48DD500010128 /* AgoraRtmKit in Frameworks */,
 				000FB11029D48B6800010128 /* RtcBasic in Frameworks */,
 			);
@@ -78,10 +116,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004C41FE29DDB195000ECC93 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				004C41FF29DDB1A3000ECC93 /* AppRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		004C420629E0272A000ECC93 /* CallFriendProjectUITests */ = {
+			isa = PBXGroup;
+			children = (
+				004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */,
+				004C420929E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift */,
+			);
+			path = CallFriendProjectUITests;
+			sourceTree = "<group>";
+		};
+		004C421029E05BF6000ECC93 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				004C421129E05C0E000ECC93 /* CallInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		004C421329E0659D000ECC93 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				004C421429E065B2000ECC93 /* ContentViewPresenter.swift */,
+				004C421829E07076000ECC93 /* LoginViewPresenter.swift */,
+				004C421A29E07220000ECC93 /* MainViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		0F0632B127FDD93800B72652 = {
 			isa = PBXGroup;
 			children = (
 				0F0632BC27FDD93800B72652 /* CallFriendProject */,
+				004C420629E0272A000ECC93 /* CallFriendProjectUITests */,
 				0F0632BB27FDD93800B72652 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				0F0632BA27FDD93800B72652 /* CallFriendProject.app */,
+				004C420529E02729000ECC93 /* CallFriendProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,6 +172,9 @@
 		0F0632BC27FDD93800B72652 /* CallFriendProject */ = {
 			isa = PBXGroup;
 			children = (
+				004C421329E0659D000ECC93 /* Presenter */,
+				004C421029E05BF6000ECC93 /* Interactor */,
+				004C41FE29DDB195000ECC93 /* Router */,
 				0F0632D427FDDE5B00B72652 /* Model */,
 				0F0632CC27FDDC3F00B72652 /* ViewModel */,
 				0F0632CB27FDDC3600B72652 /* View */,
@@ -118,7 +196,6 @@
 		0F0632CB27FDDC3600B72652 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0F06331027FF0CBD00B72652 /* VideoView.swift */,
 				0F577A49281EA70700954D4B /* CallView */,
 				0F0633172802E9C700B72652 /* LoginView.swift */,
 				0F06331E280339E800B72652 /* MainView.swift */,
@@ -146,6 +223,8 @@
 				0FEA17952805D31E00B6B8B3 /* ViewModelComunicator.swift */,
 				0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */,
 				0F577A52281EAC8B00954D4B /* Call.swift */,
+				004C421629E06FDB000ECC93 /* UserSetting.swift */,
+				004C421F29E07EB0000ECC93 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +250,7 @@
 		0F577A49281EA70700954D4B /* CallView */ = {
 			isa = PBXGroup;
 			children = (
+				0F06331027FF0CBD00B72652 /* VideoView.swift */,
 				0F577A47281EA70100954D4B /* IncommingCallView.swift */,
 				0F577A4A281EA73500954D4B /* OutgoingCallView.swift */,
 				0F577A4C281EA74300954D4B /* SpeakingView.swift */,
@@ -194,6 +274,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		004C420429E02729000ECC93 /* CallFriendProjectUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 004C420D29E0272A000ECC93 /* Build configuration list for PBXNativeTarget "CallFriendProjectUITests" */;
+			buildPhases = (
+				004C420129E02729000ECC93 /* Sources */,
+				004C420229E02729000ECC93 /* Frameworks */,
+				004C420329E02729000ECC93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				004C420C29E0272A000ECC93 /* PBXTargetDependency */,
+			);
+			name = CallFriendProjectUITests;
+			productName = CallFriendProjectUITests;
+			productReference = 004C420529E02729000ECC93 /* CallFriendProjectUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		0F0632B927FDD93800B72652 /* CallFriendProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F0632C827FDD93C00B72652 /* Build configuration list for PBXNativeTarget "CallFriendProject" */;
@@ -210,6 +308,7 @@
 			packageProductDependencies = (
 				000FB10F29D48B6800010128 /* RtcBasic */,
 				000FB11229D48DD500010128 /* AgoraRtmKit */,
+				004C421D29E076A1000ECC93 /* AlertToast */,
 			);
 			productName = CallFriendProject;
 			productReference = 0F0632BA27FDD93800B72652 /* CallFriendProject.app */;
@@ -222,9 +321,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1330;
+				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					004C420429E02729000ECC93 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 0F0632B927FDD93800B72652;
+					};
 					0F0632B927FDD93800B72652 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -242,17 +345,26 @@
 			packageReferences = (
 				000FB10E29D48B6800010128 /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
 				000FB11129D48DD500010128 /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */,
+				004C421C29E076A1000ECC93 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 0F0632BB27FDD93800B72652 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0F0632B927FDD93800B72652 /* CallFriendProject */,
+				004C420429E02729000ECC93 /* CallFriendProjectUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		004C420329E02729000ECC93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F0632B827FDD93800B72652 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -265,17 +377,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		004C420129E02729000ECC93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				004C420A29E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift in Sources */,
+				004C420829E0272A000ECC93 /* CallFriendProjectUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0F0632B627FDD93800B72652 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0F0632D327FDDE5600B72652 /* AppId.swift in Sources */,
+				004C421B29E07220000ECC93 /* MainViewPresenter.swift in Sources */,
 				0FEA17962805D31E00B6B8B3 /* ViewModelComunicator.swift in Sources */,
 				0F06331F280339E800B72652 /* MainView.swift in Sources */,
+				004C421529E065B2000ECC93 /* ContentViewPresenter.swift in Sources */,
+				004C422029E07EB0000ECC93 /* Constants.swift in Sources */,
 				0F577A53281EAC8B00954D4B /* Call.swift in Sources */,
 				0F577A4D281EA74300954D4B /* SpeakingView.swift in Sources */,
+				004C421229E05C0E000ECC93 /* CallInteractor.swift in Sources */,
 				0F0633232803468200B72652 /* MainViewModel+AgoraRtmCallDelegate.swift in Sources */,
 				0F063321280341C700B72652 /* MainViewModel.swift in Sources */,
+				004C421729E06FDB000ECC93 /* UserSetting.swift in Sources */,
 				0FFF6456283939A500DE321C /* ContentViewModel.swift in Sources */,
 				0F577A4F281EABEB00954D4B /* CallView.swift in Sources */,
 				0FFF64532839396600DE321C /* VideoSessionView.swift in Sources */,
@@ -289,15 +415,63 @@
 				0F0632BE27FDD93800B72652 /* CallFriendProjectApp.swift in Sources */,
 				0FEA17982807166D00B6B8B3 /* NotificationEvent.swift in Sources */,
 				0F06331427FF0E5500B72652 /* CallEngine.swift in Sources */,
+				004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */,
 				0FEA17A62809B62B00B6B8B3 /* MainViewModel+CXProviderDelegate.swift in Sources */,
 				0F0633182802E9C700B72652 /* LoginView.swift in Sources */,
 				0F21BDEE2827EDF30007F1E6 /* MainViewModel+AgoraRtcEngineDelegate.swift in Sources */,
+				004C421929E07076000ECC93 /* LoginViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		004C420C29E0272A000ECC93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F0632B927FDD93800B72652 /* CallFriendProject */;
+			targetProxy = 004C420B29E0272A000ECC93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		004C420E29E0272A000ECC93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7SBU5Z6RB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rh.arit.com.CallFriendProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CallFriendProject;
+			};
+			name = Debug;
+		};
+		004C420F29E0272A000ECC93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7SBU5Z6RB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rh.arit.com.CallFriendProjectUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CallFriendProject;
+			};
+			name = Release;
+		};
 		0F0632C627FDD93C00B72652 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -479,6 +653,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		004C420D29E0272A000ECC93 /* Build configuration list for PBXNativeTarget "CallFriendProjectUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				004C420E29E0272A000ECC93 /* Debug */,
+				004C420F29E0272A000ECC93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0F0632B527FDD93800B72652 /* Build configuration list for PBXProject "CallFriendProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -516,6 +699,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		004C421C29E076A1000ECC93 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -528,6 +719,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 000FB11129D48DD500010128 /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */;
 			productName = AgoraRtmKit;
+		};
+		004C421D29E076A1000ECC93 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 004C421C29E076A1000ECC93 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

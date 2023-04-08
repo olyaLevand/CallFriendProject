@@ -9,66 +9,110 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var viewModel: MainViewModel
-    @State var username: String
+    @ObservedObject var presenter = MainViewPresenter()
+    
     @State var calleeName: String = ""
-    @State var option: ConnectOption? = nil
+    @State var option: ConnectOption = .normalCall
+    @State var presentAlert: Bool = false
     
     var body: some View {
-        if viewModel.call != nil && viewModel.call?.state != .ended {
-            CallView(call: $viewModel.call, hangUpAction: viewModel.hangUp, acceptCallAction: viewModel.acceptCall )
-        } else {
+//        if viewModel.call != nil && viewModel.call?.state != .ended {
+//            CallView(call: $viewModel.call, hangUpAction: viewModel.hangUp, acceptCallAction: viewModel.acceptCall)
+//        } else {
             VStack(spacing: 30){
-                Text("Hello, \(username)")
+                Text("Hello, \(presenter.getUsername())")
+                    .foregroundColor(AppColors.darkBlueColor)
+                    .font(.largeTitle)
+                    .padding()
+                    .padding(.bottom, 30)
                 
-                TextField(
-                    "Enter callee username: ",
-                    text: $calleeName
-                )
-                
-                Text("Choose options: ")
+                VStack(alignment: .leading, spacing: 0){
+                    Text("Enter callee username")
+                        .foregroundColor(AppColors.darkBlueColor)
+                        .font(.headline)
+                        .padding(.vertical, 5)
+                    TextField(
+                        " Username ",
+                        text: $calleeName
+                    )
+                    .frame(width: UIScreen.main.bounds.width*0.6)
+                        .padding(5)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(AppColors.darkBlueColor, lineWidth: 2)
+                            )
+                            .foregroundColor(AppColors.darkBlueColor)
+                }
                 
                 HStack{
-                    Spacer()
-                    
-                    Button("Normal call"){
-                        option = .normalCall
+                    Text("Call type: ")
+                        .foregroundColor(AppColors.darkBlueColor)
+                        .font(.headline)
+                    Picker("Call type", selection: $option) {
+                        Text("Voice").tag(ConnectOption.normalCall)
+                        Text("Video").tag(ConnectOption.videoCall)
                     }
-                    .frame(width: 100, height: 40)
-                    .foregroundColor(option == .normalCall ? .white : .blue)
-                    .background((option == .normalCall ? .blue : .white))
-                    .cornerRadius(10)
-
-                    Spacer()
-                    Button("Video Call"){
-                        option = .videoCall
-                    }
-                    .frame(width: 100, height: 40)
-                    .foregroundColor(option == .videoCall ? .white : .blue)
-                    .background((option == .videoCall ? .blue : .white))
-                    .cornerRadius(10)
-
-                    Spacer()
-                }.frame(height: 70)
+                    .pickerStyle(.segmented)
+                    .background(AppColors.darkBlueColor)
+                    .cornerRadius(5)
+                }.padding(.horizontal, 70)
                 
-                Button("Tap to connect"){
-                    if option == .normalCall{
-                        viewModel.startCall(to: calleeName)
-                    } else if option == .videoCall{
-                        viewModel.startVideo(to: calleeName)
+//                HStack{
+//                    Spacer()
+//
+//                    Button("Voice call"){
+//                        option = .normalCall
+//                    }
+//                    .frame(width: 100, height: 40)
+//                    .foregroundColor(option == .normalCall ? .white : .blue)
+//                    .background((option == .normalCall ? .blue : .white))
+//                    .cornerRadius(10)
+//
+//                    Spacer()
+//                    Button("Video Call"){
+//                        option = .videoCall
+//                    }
+//                    .frame(width: 100, height: 40)
+//                    .foregroundColor(option == .videoCall ? .white : .blue)
+//                    .background((option == .videoCall ? .blue : .white))
+//                    .cornerRadius(10)
+//
+//                    Spacer()
+//                }.frame(height: 70)
+                
+                Button("Connect"){
+                    if calleeName.isEmpty {
+                        presentAlert = true
                     }
+//                    if option == .normalCall{
+//                        viewModel.startCall(to: calleeName)
+//                    } else if option == .videoCall{
+//                        viewModel.startVideo(to: calleeName)
+//                    }
                 }
-            }
+                .padding(.horizontal)
+                .padding(.vertical, 10)
+                .foregroundColor(.white)
+                .background(AppColors.darkBlueColor)
+                .cornerRadius(10)
+                .padding()
+                .font(.headline)
+                .cornerRadius(15)
+//            }
         }
-
+            .alert("Please, enter callee nickname", isPresented: $presentAlert) {
+                        Button("OK", role: .cancel) {
+                            presentAlert = false
+                        }
+                    }
     }
 }
 
-//struct MainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MainView()
-//    }
-//}
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
+    }
+}
 
 
 extension MainView{

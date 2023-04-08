@@ -8,27 +8,38 @@
 import SwiftUI
 
 struct SpeakingView: View {
-    var speakers: [String]
+    var speaker: String
     var hangUpAction: () -> ()
     
     var body: some View {
         VStack{
-            Text("Conversation with: \(speakers.joined(separator: ", "))")
+            Text("Conversation with \n\(speaker)")
+                .multilineTextAlignment(.center)
+                .foregroundColor(AppColors.darkBlueColor)
+                .font(.largeTitle)
+                .padding(20)
+                .padding(.bottom, 30)
             
             Button(action: {
                 hangUpAction()
             }, label: {
                 Text("Hung Up")
+                    .padding(15)
+                    .background(AppColors.grayColor)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
             })
         }
-
-        
-        
+        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+        .background(AppColors.yellowColor)
     }
+
 }
 
-//struct SpeakingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SpeakingView(speakers: ["Marry", "Mykola", "Taras"])
-//    }
-//}
+struct SpeakingView_Previews: PreviewProvider {
+    static var previews: some View {
+        SpeakingView(speaker: "Marry", hangUpAction: {
+            
+        })
+    }
+}

@@ -58,6 +58,17 @@
                ReferencedContainer = "container:CallFriendProject.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "004C420429E02729000ECC93"
+               BuildableName = "CallFriendProjectUITests.xctest"
+               BlueprintName = "CallFriendProjectUITests"
+               ReferencedContainer = "container:CallFriendProject.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

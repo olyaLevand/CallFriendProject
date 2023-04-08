@@ -124,7 +124,7 @@ fileprivate extension VideoView {
         // same channel successfully using the same app id.
         // 2. One token is only valid for the channel name that
         // you use to generate this token.
-        rtcEngine.joinChannel(byToken: AppID.token, channelId: channelId, info: nil, uid: 0, joinSuccess: nil)
+        rtcEngine.joinChannel(byToken: AppID.token, channelId: channelId, info: nil, uid: 12, joinSuccess: nil)
     }
 
     func leaveChannel() {

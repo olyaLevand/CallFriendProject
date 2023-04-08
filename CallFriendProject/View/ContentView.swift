@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var contentViewModel = ContentViewModel()
+    
+    @ObservedObject var contentViewPresenter = ContentViewPresenter()
     
     var body: some View {
-        switch contentViewModel.state{
-        case .login: LoginView(viewModel: contentViewModel.loginViewModel)
+        switch contentViewPresenter.state{
+        case .login: LoginView()
         case .main:
-            MainView(viewModel:contentViewModel.mainViewModel, username: contentViewModel.dataCollector.userName!)
+            MainView()
+        case .call:
+            MainView()
         }
- 
     }
 }
 

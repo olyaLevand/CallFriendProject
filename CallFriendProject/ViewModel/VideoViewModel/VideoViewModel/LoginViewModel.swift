@@ -20,7 +20,7 @@ class LoginViewModel{
     }
     
     func login(username: String) -> Bool{
-        agoraRtmkit?.login(byToken: nil, user: username) { [weak self] (errorCode) in
+        agoraRtmkit?.login(byToken: AppID.token, user: username) { [weak self] (errorCode) in
             guard errorCode == .ok else {
                 return 
             }
@@ -32,7 +32,6 @@ class LoginViewModel{
             NotificationCenter.default.post(name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)
 
 //            self.setAgoraCallkit(AgoraRtm.kit?.getRtmCall())
-            
 //            print("logged in")
 //            self.callKit = AgoraRtm.kit?.getRtmCall()
 //            callKit?.callDelegate = self
