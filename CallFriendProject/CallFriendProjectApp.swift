@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct CallFriendProjectApp: App {
-    
+    @UIApplicationDelegateAdaptor private var appDelegate: AppDelegate
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(contentViewPresenter: ContentViewPresenter(callMeadiator: appDelegate.callKitMediator))
         }
     }
 }

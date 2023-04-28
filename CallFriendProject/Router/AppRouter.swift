@@ -18,10 +18,22 @@ class AppRouter: ObservableObject{
     
     init(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.openMainScreen), name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openCallScreen), name: Notification.Name(NotificationEvent.openCallView.rawValue), object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openLoginScreen), name: Notification.Name(NotificationEvent.openLoginScreen.rawValue), object: nil)
     }
     
-    func goToMainScreen(){
+    static func goToMainScreen(){
         NotificationCenter.default.post(name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)
+    }
+    
+    static func goTpCallScreen(){
+        NotificationCenter.default.post(name: Notification.Name(NotificationEvent.openCallView.rawValue), object: nil)
+    }
+
+    static func goToLoginlScreen(){
+        NotificationCenter.default.post(name: Notification.Name(NotificationEvent.openLoginScreen.rawValue), object: nil)
     }
     
     @objc func openMainScreen(){
@@ -32,7 +44,7 @@ class AppRouter: ObservableObject{
         self.state = .login
     }
     
-    func openCallScreen(){
+    @objc func openCallScreen(){
         self.state = .call
     }
     

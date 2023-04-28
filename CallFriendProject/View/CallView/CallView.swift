@@ -9,26 +9,24 @@ import SwiftUI
 
 struct CallView: View {
     
-    @Binding var call: Call?
-    
-    var hangUpAction: () -> ()
-    var acceptCallAction: () -> ()
+    @ObservedObject var presenter: CallViewPresenter
     
     var body: some View {
-        switch call?.state{
+        switch presenter.call?.state{
         case .initiating:
-            if call!.direction == .outgoing {
-                OutgoingCallView(haungUpAction: hangUpAction, callee: "Olya")
+            if presenter.call!.direction == .outgoing {
+                OutgoingCallView(haungUpAction: presenter.hangUpCall, callee: presenter.call?.destination ?? "")
             }else {
-                IncommingCallView(acceptCallAction: acceptCallAction, hungUpAction: hangUpAction, caller: call!.caller, speaker: "Olya")
+                IncommingCallView(acceptCallAction: presenter.acceptCall, hungUpAction: presenter.hangUpCall, caller: presenter.getUsername() , speaker: presenter.call?.destination ?? "" )
             }
         case .started:
-            if call!.callType == .video{
-                VideoView(channelId: call!.chanelId!)
+            if presenter.call!.callType == .video{
+                VideoView(client: presenter.callMediator.client!, destination: self.presenter.call?.destination ?? "", hangUpAction: presenter.hangUpCall)
             } else {
-                SpeakingView(speaker: "M", hangUpAction: hangUpAction)
+                SpeakingView(speaker: presenter.call?.destination ?? "", hangUpAction: presenter.hangUpCall)
             }
-        case .ended: EmptyView()
+        case .ended:
+            EmptyView()
         case .none: EmptyView()
         }
     }

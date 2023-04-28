@@ -10,35 +10,35 @@ import AgoraRtcKit
 import SwiftUI
 import UIKit
 
-class ContentViewModel: ObservableObject{
-    
-    var dataCollector: DataCollector
-    var mainViewModel: MainViewModel! = nil
-    var loginViewModel: LoginViewModel
-    @Published var state = CurrentState.login
-    
-    enum CurrentState{
-        case login
-        case main
-    }
-    
-    init(){
-        let collector = DataCollector()
-        self.dataCollector = collector
-        self.loginViewModel = LoginViewModel(dataCollector: collector)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.loggedInNotification(notification:)), name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)
-    }
-    
-    
-    @objc func loggedInNotification(notification: Notification) {
-        guard let agoraCallKt = dataCollector.agoraCallKit else { return }
-        self.mainViewModel = MainViewModel(agoraRtmCallKit: agoraCallKt)
-        self.mainViewModel.setCallDelegate()
-        self.state = CurrentState.main
-    }
-
-}
+//class ContentViewModel: ObservableObject{
+//    
+//    var dataCollector: DataCollector
+//    var mainViewModel: MainViewModel! = nil
+//    var loginViewModel: LoginViewModel
+//    @Published var state = CurrentState.login
+//    
+//    enum CurrentState{
+//        case login
+//        case main
+//    }
+//    
+//    init(){
+//        let collector = DataCollector()
+//        self.dataCollector = collector
+//        self.loginViewModel = LoginViewModel(dataCollector: collector)
+//        
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.loggedInNotification(notification:)), name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)
+//    }
+//    
+//    
+//    @objc func loggedInNotification(notification: Notification) {
+//        guard let agoraCallKt = dataCollector.agoraCallKit else { return }
+//        self.mainViewModel = MainViewModel(agoraRtmCallKit: agoraCallKt)
+//        self.mainViewModel.setCallDelegate()
+//        self.state = CurrentState.main
+//    }
+//
+//}
 
 
 

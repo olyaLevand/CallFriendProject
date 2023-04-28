@@ -9,21 +9,22 @@ import Foundation
 import Combine
 
 class ContentViewPresenter: ObservableObject {
+    
+    let callMeadiator: CallMediator
     let router = AppRouter()
 
     @Published var state: AppRouter.RouterState = .login
-    
     private var cancellables = Set<AnyCancellable>()
 
-    init() {
+    init(callMeadiator: CallMediator) {
+        self.callMeadiator = callMeadiator
         router.$state
             .assign(to: \.state, on: self)
             .store(in: &cancellables)
     }
     
-    
     func goToMainScreen(){
-        router.goToMainScreen()
+        AppRouter.goToMainScreen()
     }
     
 }

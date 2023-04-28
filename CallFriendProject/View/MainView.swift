@@ -9,17 +9,30 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var presenter = MainViewPresenter()
+    @ObservedObject var presenter: MainViewPresenter
     
     @State var calleeName: String = ""
     @State var option: ConnectOption = .normalCall
     @State var presentAlert: Bool = false
     
     var body: some View {
-//        if viewModel.call != nil && viewModel.call?.state != .ended {
-//            CallView(call: $viewModel.call, hangUpAction: viewModel.hangUp, acceptCallAction: viewModel.acceptCall)
-//        } else {
             VStack(spacing: 30){
+                HStack{
+                    Spacer()
+                    Button("Logout"){
+                        presenter.logout()
+                    }    .padding(.horizontal)
+                        .padding(.vertical, 10)
+                        .foregroundColor(.white)
+                        .background(AppColors.darkBlueColor)
+                        .cornerRadius(10)
+                        .padding()
+                        .font(.headline)
+                        .cornerRadius(15)
+                }
+                
+                Spacer()
+                
                 Text("Hello, \(presenter.getUsername())")
                     .foregroundColor(AppColors.darkBlueColor)
                     .font(.largeTitle)
@@ -55,40 +68,17 @@ struct MainView: View {
                     .pickerStyle(.segmented)
                     .background(AppColors.darkBlueColor)
                     .cornerRadius(5)
+                    .onReceive([self.option].publisher.first()) { (value) in
+                        value == .normalCall ? presenter.setCallType(.voice) : presenter.setCallType(.video)
+                    }
                 }.padding(.horizontal, 70)
-                
-//                HStack{
-//                    Spacer()
-//
-//                    Button("Voice call"){
-//                        option = .normalCall
-//                    }
-//                    .frame(width: 100, height: 40)
-//                    .foregroundColor(option == .normalCall ? .white : .blue)
-//                    .background((option == .normalCall ? .blue : .white))
-//                    .cornerRadius(10)
-//
-//                    Spacer()
-//                    Button("Video Call"){
-//                        option = .videoCall
-//                    }
-//                    .frame(width: 100, height: 40)
-//                    .foregroundColor(option == .videoCall ? .white : .blue)
-//                    .background((option == .videoCall ? .blue : .white))
-//                    .cornerRadius(10)
-//
-//                    Spacer()
-//                }.frame(height: 70)
                 
                 Button("Connect"){
                     if calleeName.isEmpty {
                         presentAlert = true
+                    } else {
+                        presenter.connectButtonTapped(calleeName: calleeName)
                     }
-//                    if option == .normalCall{
-//                        viewModel.startCall(to: calleeName)
-//                    } else if option == .videoCall{
-//                        viewModel.startVideo(to: calleeName)
-//                    }
                 }
                 .padding(.horizontal)
                 .padding(.vertical, 10)
@@ -98,7 +88,7 @@ struct MainView: View {
                 .padding()
                 .font(.headline)
                 .cornerRadius(15)
-//            }
+                Spacer()
         }
             .alert("Please, enter callee nickname", isPresented: $presentAlert) {
                         Button("OK", role: .cancel) {
@@ -108,11 +98,11 @@ struct MainView: View {
     }
 }
 
-struct MainView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-    }
-}
+//struct MainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//    }
+//}
 
 
 extension MainView{

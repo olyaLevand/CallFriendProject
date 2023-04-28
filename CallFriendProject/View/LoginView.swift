@@ -9,7 +9,7 @@ import SwiftUI
 import AlertToast
 
 struct LoginView: View {
-    var presenter = LoginViewPresenter()
+    var presenter: LoginViewPresenter
 
     @State var username: String = ""
     @State var presentAlert: Bool = false
@@ -67,8 +67,8 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
+//struct LoginView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//    }
+//}

@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		000FB11029D48B6800010128 /* RtcBasic in Frameworks */ = {isa = PBXBuildFile; productRef = 000FB10F29D48B6800010128 /* RtcBasic */; };
 		000FB11329D48DD500010128 /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 000FB11229D48DD500010128 /* AgoraRtmKit */; };
+		003DC04829E1FC1400034A80 /* CallViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC04729E1FC1400034A80 /* CallViewRouter.swift */; };
+		003DC04C29E2018100034A80 /* CallMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC04B29E2018100034A80 /* CallMediator.swift */; };
+		003DC05029E2035B00034A80 /* SinchRTC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 003DC04F29E2035B00034A80 /* SinchRTC.xcframework */; };
+		003DC05129E2035B00034A80 /* SinchRTC.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 003DC04F29E2035B00034A80 /* SinchRTC.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		003DC05429E2046100034A80 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC05329E2046100034A80 /* Config.swift */; };
+		003DC05729E209C800034A80 /* ringback.wav in Resources */ = {isa = PBXBuildFile; fileRef = 003DC05629E209C800034A80 /* ringback.wav */; };
+		003DC05929E209E200034A80 /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = 003DC05829E209E200034A80 /* incoming.wav */; };
+		003DC05C29E20B2B00034A80 /* CallMediator+CXProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC05B29E20B2B00034A80 /* CallMediator+CXProviderDelegate.swift */; };
+		003DC05E29E20BB600034A80 /* CallMediator+SinchClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC05D29E20BB600034A80 /* CallMediator+SinchClientDelegate.swift */; };
+		003DC06029E20BE900034A80 /* SinchJWT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC05F29E20BE900034A80 /* SinchJWT.swift */; };
+		003DC06229E20C8100034A80 /* CallMediator+SinchCallClientDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06129E20C8100034A80 /* CallMediator+SinchCallClientDelegate.swift */; };
+		003DC06429E20CCC00034A80 /* CallMediator+SinchCallDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06329E20CCC00034A80 /* CallMediator+SinchCallDelegate.swift */; };
+		003DC06629E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06529E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift */; };
+		003DC06A29E211A700034A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06929E211A700034A80 /* AppDelegate.swift */; };
 		004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C41FF29DDB1A3000ECC93 /* AppRouter.swift */; };
 		004C420829E0272A000ECC93 /* CallFriendProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */; };
 		004C420A29E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C420929E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift */; };
@@ -19,11 +33,12 @@
 		004C421B29E07220000ECC93 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421A29E07220000ECC93 /* MainViewPresenter.swift */; };
 		004C421E29E076A1000ECC93 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 004C421D29E076A1000ECC93 /* AlertToast */; };
 		004C422029E07EB0000ECC93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421F29E07EB0000ECC93 /* Constants.swift */; };
+		00C199B629FAE43A00732115 /* CallViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199B529FAE43A00732115 /* CallViewPresenter.swift */; };
+		00C199B829FC10F600732115 /* VideoSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199B729FC10F600732115 /* VideoSwiftUIView.swift */; };
 		0F0632BE27FDD93800B72652 /* CallFriendProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */; };
 		0F0632C027FDD93800B72652 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632BF27FDD93800B72652 /* ContentView.swift */; };
 		0F0632C227FDD93C00B72652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0632C127FDD93C00B72652 /* Assets.xcassets */; };
 		0F0632C527FDD93C00B72652 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0632C427FDD93C00B72652 /* Preview Assets.xcassets */; };
-		0F0632D327FDDE5600B72652 /* AppId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632D227FDDE5600B72652 /* AppId.swift */; };
 		0F06331127FF0CBD00B72652 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06331027FF0CBD00B72652 /* VideoView.swift */; };
 		0F06331427FF0E5500B72652 /* CallEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06331327FF0E5500B72652 /* CallEngine.swift */; };
 		0F0633182802E9C700B72652 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0633172802E9C700B72652 /* LoginView.swift */; };
@@ -36,7 +51,6 @@
 		0F577A4D281EA74300954D4B /* SpeakingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F577A4C281EA74300954D4B /* SpeakingView.swift */; };
 		0F577A4F281EABEB00954D4B /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F577A4E281EABEB00954D4B /* CallView.swift */; };
 		0F577A53281EAC8B00954D4B /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F577A52281EAC8B00954D4B /* Call.swift */; };
-		0FEA17962805D31E00B6B8B3 /* ViewModelComunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA17952805D31E00B6B8B3 /* ViewModelComunicator.swift */; };
 		0FEA17982807166D00B6B8B3 /* NotificationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */; };
 		0FEA17A62809B62B00B6B8B3 /* MainViewModel+CXProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA17A52809B62B00B6B8B3 /* MainViewModel+CXProviderDelegate.swift */; };
 		0FFF64512839396600DE321C /* VideoCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF644E2839396600DE321C /* VideoCanvas.swift */; };
@@ -56,7 +70,36 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		003DC05229E2035B00034A80 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				003DC05129E2035B00034A80 /* SinchRTC.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		003DC04729E1FC1400034A80 /* CallViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewRouter.swift; sourceTree = "<group>"; };
+		003DC04B29E2018100034A80 /* CallMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallMediator.swift; sourceTree = "<group>"; };
+		003DC04F29E2035B00034A80 /* SinchRTC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SinchRTC.xcframework; path = "../../Downloads/SinchRTC-iOS-5.19.19+00672844/dynamic/SinchRTC/SinchRTC.xcframework"; sourceTree = "<group>"; };
+		003DC05329E2046100034A80 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		003DC05629E209C800034A80 /* ringback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ringback.wav; sourceTree = "<group>"; };
+		003DC05829E209E200034A80 /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = incoming.wav; sourceTree = "<group>"; };
+		003DC05B29E20B2B00034A80 /* CallMediator+CXProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CallMediator+CXProviderDelegate.swift"; sourceTree = "<group>"; };
+		003DC05D29E20BB600034A80 /* CallMediator+SinchClientDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CallMediator+SinchClientDelegate.swift"; sourceTree = "<group>"; };
+		003DC05F29E20BE900034A80 /* SinchJWT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinchJWT.swift; sourceTree = "<group>"; };
+		003DC06129E20C8100034A80 /* CallMediator+SinchCallClientDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CallMediator+SinchCallClientDelegate.swift"; sourceTree = "<group>"; };
+		003DC06329E20CCC00034A80 /* CallMediator+SinchCallDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CallMediator+SinchCallDelegate.swift"; sourceTree = "<group>"; };
+		003DC06529E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CallMediator+SinchAudioControllerDelegate.swift"; sourceTree = "<group>"; };
+		003DC06729E2110F00034A80 /* CallFriendProject.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CallFriendProject.entitlements; sourceTree = "<group>"; };
+		003DC06829E2111300034A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		003DC06929E211A700034A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		004C41FF29DDB1A3000ECC93 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		004C420529E02729000ECC93 /* CallFriendProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallFriendProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectUITests.swift; sourceTree = "<group>"; };
@@ -67,12 +110,13 @@
 		004C421829E07076000ECC93 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
 		004C421A29E07220000ECC93 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		004C421F29E07EB0000ECC93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		00C199B529FAE43A00732115 /* CallViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewPresenter.swift; sourceTree = "<group>"; };
+		00C199B729FC10F600732115 /* VideoSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSwiftUIView.swift; sourceTree = "<group>"; };
 		0F0632BA27FDD93800B72652 /* CallFriendProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallFriendProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectApp.swift; sourceTree = "<group>"; };
 		0F0632BF27FDD93800B72652 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F0632C127FDD93C00B72652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F0632C427FDD93C00B72652 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0F0632D227FDDE5600B72652 /* AppId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppId.swift; sourceTree = "<group>"; };
 		0F06331027FF0CBD00B72652 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		0F06331327FF0E5500B72652 /* CallEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallEngine.swift; sourceTree = "<group>"; };
 		0F0633172802E9C700B72652 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -85,7 +129,6 @@
 		0F577A4C281EA74300954D4B /* SpeakingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakingView.swift; sourceTree = "<group>"; };
 		0F577A4E281EABEB00954D4B /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		0F577A52281EAC8B00954D4B /* Call.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Call.swift; sourceTree = "<group>"; };
-		0FEA17952805D31E00B6B8B3 /* ViewModelComunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelComunicator.swift; sourceTree = "<group>"; };
 		0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationEvent.swift; sourceTree = "<group>"; };
 		0FEA17A52809B62B00B6B8B3 /* MainViewModel+CXProviderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+CXProviderDelegate.swift"; sourceTree = "<group>"; };
 		0FFF644E2839396600DE321C /* VideoCanvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoCanvas.swift; path = VideoViewModel/VideoCanvas.swift; sourceTree = "<group>"; };
@@ -108,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				004C421E29E076A1000ECC93 /* AlertToast in Frameworks */,
+				003DC05029E2035B00034A80 /* SinchRTC.xcframework in Frameworks */,
 				000FB11329D48DD500010128 /* AgoraRtmKit in Frameworks */,
 				000FB11029D48B6800010128 /* RtcBasic in Frameworks */,
 			);
@@ -116,10 +160,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		003DC04929E2014E00034A80 /* CallMediator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CallMediator;
+			sourceTree = "<group>";
+		};
+		003DC04D29E2019F00034A80 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				003DC05A29E20AFC00034A80 /* CallMediator */,
+				0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */,
+				0F577A52281EAC8B00954D4B /* Call.swift */,
+				004C421629E06FDB000ECC93 /* UserSetting.swift */,
+				004C421F29E07EB0000ECC93 /* Constants.swift */,
+				003DC05329E2046100034A80 /* Config.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		003DC04E29E2035B00034A80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				003DC04F29E2035B00034A80 /* SinchRTC.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		003DC05529E2099300034A80 /* Supported files */ = {
+			isa = PBXGroup;
+			children = (
+				003DC05629E209C800034A80 /* ringback.wav */,
+				003DC05829E209E200034A80 /* incoming.wav */,
+				003DC05F29E20BE900034A80 /* SinchJWT.swift */,
+			);
+			path = "Supported files";
+			sourceTree = "<group>";
+		};
+		003DC05A29E20AFC00034A80 /* CallMediator */ = {
+			isa = PBXGroup;
+			children = (
+				003DC04B29E2018100034A80 /* CallMediator.swift */,
+				003DC06529E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift */,
+				003DC05B29E20B2B00034A80 /* CallMediator+CXProviderDelegate.swift */,
+				003DC05D29E20BB600034A80 /* CallMediator+SinchClientDelegate.swift */,
+				003DC06129E20C8100034A80 /* CallMediator+SinchCallClientDelegate.swift */,
+				003DC06329E20CCC00034A80 /* CallMediator+SinchCallDelegate.swift */,
+			);
+			path = CallMediator;
+			sourceTree = "<group>";
+		};
 		004C41FE29DDB195000ECC93 /* Router */ = {
 			isa = PBXGroup;
 			children = (
 				004C41FF29DDB1A3000ECC93 /* AppRouter.swift */,
+				003DC04729E1FC1400034A80 /* CallViewRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -136,6 +232,7 @@
 		004C421029E05BF6000ECC93 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				003DC04929E2014E00034A80 /* CallMediator */,
 				004C421129E05C0E000ECC93 /* CallInteractor.swift */,
 			);
 			path = Interactor;
@@ -147,6 +244,7 @@
 				004C421429E065B2000ECC93 /* ContentViewPresenter.swift */,
 				004C421829E07076000ECC93 /* LoginViewPresenter.swift */,
 				004C421A29E07220000ECC93 /* MainViewPresenter.swift */,
+				00C199B529FAE43A00732115 /* CallViewPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -157,6 +255,7 @@
 				0F0632BC27FDD93800B72652 /* CallFriendProject */,
 				004C420629E0272A000ECC93 /* CallFriendProjectUITests */,
 				0F0632BB27FDD93800B72652 /* Products */,
+				003DC04E29E2035B00034A80 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -172,15 +271,19 @@
 		0F0632BC27FDD93800B72652 /* CallFriendProject */ = {
 			isa = PBXGroup;
 			children = (
+				003DC06829E2111300034A80 /* Info.plist */,
+				003DC06729E2110F00034A80 /* CallFriendProject.entitlements */,
+				003DC05529E2099300034A80 /* Supported files */,
+				003DC04D29E2019F00034A80 /* Entity */,
 				004C421329E0659D000ECC93 /* Presenter */,
 				004C421029E05BF6000ECC93 /* Interactor */,
 				004C41FE29DDB195000ECC93 /* Router */,
-				0F0632D427FDDE5B00B72652 /* Model */,
 				0F0632CC27FDDC3F00B72652 /* ViewModel */,
 				0F0632CB27FDDC3600B72652 /* View */,
 				0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */,
 				0F0632C127FDD93C00B72652 /* Assets.xcassets */,
 				0F0632C327FDD93C00B72652 /* Preview Content */,
+				003DC06929E211A700034A80 /* AppDelegate.swift */,
 			);
 			path = CallFriendProject;
 			sourceTree = "<group>";
@@ -216,19 +319,6 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		0F0632D427FDDE5B00B72652 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				0F0632D227FDDE5600B72652 /* AppId.swift */,
-				0FEA17952805D31E00B6B8B3 /* ViewModelComunicator.swift */,
-				0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */,
-				0F577A52281EAC8B00954D4B /* Call.swift */,
-				004C421629E06FDB000ECC93 /* UserSetting.swift */,
-				004C421F29E07EB0000ECC93 /* Constants.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		0F06330927FF0AC200B72652 /* VideoViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +345,7 @@
 				0F577A4A281EA73500954D4B /* OutgoingCallView.swift */,
 				0F577A4C281EA74300954D4B /* SpeakingView.swift */,
 				0F577A4E281EABEB00954D4B /* CallView.swift */,
+				00C199B729FC10F600732115 /* VideoSwiftUIView.swift */,
 			);
 			path = CallView;
 			sourceTree = "<group>";
@@ -299,6 +390,7 @@
 				0F0632B627FDD93800B72652 /* Sources */,
 				0F0632B727FDD93800B72652 /* Frameworks */,
 				0F0632B827FDD93800B72652 /* Resources */,
+				003DC05229E2035B00034A80 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -369,6 +461,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				003DC05929E209E200034A80 /* incoming.wav in Resources */,
+				003DC05729E209C800034A80 /* ringback.wav in Resources */,
 				0F0632C527FDD93C00B72652 /* Preview Assets.xcassets in Resources */,
 				0F0632C227FDD93C00B72652 /* Assets.xcassets in Resources */,
 			);
@@ -390,9 +484,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F0632D327FDDE5600B72652 /* AppId.swift in Sources */,
 				004C421B29E07220000ECC93 /* MainViewPresenter.swift in Sources */,
-				0FEA17962805D31E00B6B8B3 /* ViewModelComunicator.swift in Sources */,
+				003DC06229E20C8100034A80 /* CallMediator+SinchCallClientDelegate.swift in Sources */,
+				003DC06A29E211A700034A80 /* AppDelegate.swift in Sources */,
 				0F06331F280339E800B72652 /* MainView.swift in Sources */,
 				004C421529E065B2000ECC93 /* ContentViewPresenter.swift in Sources */,
 				004C422029E07EB0000ECC93 /* Constants.swift in Sources */,
@@ -405,13 +499,20 @@
 				0FFF6456283939A500DE321C /* ContentViewModel.swift in Sources */,
 				0F577A4F281EABEB00954D4B /* CallView.swift in Sources */,
 				0FFF64532839396600DE321C /* VideoSessionView.swift in Sources */,
+				003DC06029E20BE900034A80 /* SinchJWT.swift in Sources */,
 				0FFF64522839396600DE321C /* VideoEngine.swift in Sources */,
 				0F0632C027FDD93800B72652 /* ContentView.swift in Sources */,
+				003DC05E29E20BB600034A80 /* CallMediator+SinchClientDelegate.swift in Sources */,
+				003DC05C29E20B2B00034A80 /* CallMediator+CXProviderDelegate.swift in Sources */,
 				0FFF6457283939A500DE321C /* LoginViewModel.swift in Sources */,
 				0F06331127FF0CBD00B72652 /* VideoView.swift in Sources */,
+				00C199B829FC10F600732115 /* VideoSwiftUIView.swift in Sources */,
 				0F577A4B281EA73500954D4B /* OutgoingCallView.swift in Sources */,
 				0F577A48281EA70100954D4B /* IncommingCallView.swift in Sources */,
+				003DC06429E20CCC00034A80 /* CallMediator+SinchCallDelegate.swift in Sources */,
+				00C199B629FAE43A00732115 /* CallViewPresenter.swift in Sources */,
 				0FFF64512839396600DE321C /* VideoCanvas.swift in Sources */,
+				003DC06629E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift in Sources */,
 				0F0632BE27FDD93800B72652 /* CallFriendProjectApp.swift in Sources */,
 				0FEA17982807166D00B6B8B3 /* NotificationEvent.swift in Sources */,
 				0F06331427FF0E5500B72652 /* CallEngine.swift in Sources */,
@@ -420,6 +521,9 @@
 				0F0633182802E9C700B72652 /* LoginView.swift in Sources */,
 				0F21BDEE2827EDF30007F1E6 /* MainViewModel+AgoraRtcEngineDelegate.swift in Sources */,
 				004C421929E07076000ECC93 /* LoginViewPresenter.swift in Sources */,
+				003DC05429E2046100034A80 /* Config.swift in Sources */,
+				003DC04C29E2018100034A80 /* CallMediator.swift in Sources */,
+				003DC04829E1FC1400034A80 /* CallViewRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,11 +544,11 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7SBU5Z6RB6;
+				DEVELOPMENT_TEAM = P6739FAT5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rh.arit.com.CallFriendProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.cf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -459,11 +563,11 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7SBU5Z6RB6;
+				DEVELOPMENT_TEAM = P6739FAT5K;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = rh.arit.com.CallFriendProjectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.cf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -593,26 +697,31 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CallFriendProject/CallFriendProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CallFriendProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 7SBU5Z6RB6;
+				DEVELOPMENT_TEAM = P6739FAT5K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_FILE = CallFriendProject/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "uses Camera for video calling";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone for voice calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.arit.rh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.cf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -624,26 +733,31 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CallFriendProject/CallFriendProject.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CallFriendProject/Preview Content\"";
-				DEVELOPMENT_TEAM = 7SBU5Z6RB6;
+				DEVELOPMENT_TEAM = P6739FAT5K;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_FILE = CallFriendProject/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "uses Camera for video calling";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone for voice calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.arit.rh;
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.cf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

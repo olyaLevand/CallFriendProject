@@ -20,25 +20,23 @@ class Call {
         case ended
     }
     
-    enum CallType: String{
-        case normal = "normal"
-        case group = "group"
-        case video = "video"
-    }
-    
+    var uuid: UUID? = nil
     var state: State
     var direction: Direction
-    var caller: String
-    var allCallees: [String]
+    var destination: String
     var callType: CallType
     var chanelId: String?
     
-    init(state: State, direction: Direction, callType: CallType, caller: String, callees: [String], channelId: String? = nil){
+    init(state: State, direction: Direction, callType: CallType, destination: String, channelId: String? = nil){
         self.state = state
         self.direction = direction
-        self.caller = caller
-        self.allCallees = callees
+        self.destination = destination
         self.callType = callType
         self.chanelId = channelId
     }
+}
+
+enum CallType: String{
+    case voice = "voice"
+    case video = "video"
 }

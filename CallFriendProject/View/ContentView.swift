@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var contentViewPresenter = ContentViewPresenter()
+    @ObservedObject var contentViewPresenter: ContentViewPresenter
     
     var body: some View {
         switch contentViewPresenter.state{
-        case .login: LoginView()
+        case .login: LoginView(presenter: LoginViewPresenter(callMediator: contentViewPresenter.callMeadiator))
         case .main:
-            MainView()
+            MainView(presenter: MainViewPresenter(callMeaditor: contentViewPresenter.callMeadiator))
         case .call:
-            MainView()
+            CallView(presenter: CallViewPresenter(callMediator: contentViewPresenter.callMeadiator))
         }
     }
 }
