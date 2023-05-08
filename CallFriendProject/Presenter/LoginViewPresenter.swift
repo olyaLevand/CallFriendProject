@@ -6,14 +6,19 @@
 //
 
 import Foundation
+import Combine
+import Firebase
 
-class LoginViewPresenter{
+class LoginViewPresenter: ObservableObject{
     
     let router = AppRouter()
     var callMediator: CallMediator
     
     init(callMediator: CallMediator){
         self.callMediator = callMediator
+        Auth.auth().addStateDidChangeListener { auth, user in
+            
+        }
     }
     
     private func saveUsername(username: String){
@@ -28,11 +33,51 @@ class LoginViewPresenter{
         })
     }
     
-    func loginButtonTap(username: String){
+    private func loginToSinch(username: String, completion: @escaping () -> ()){
         guard !username.isEmpty else { return }
         createClient(username:username, completion:  { [weak self] in
-            self?.saveUsername(username: username)
-            AppRouter.goToMainScreen()
+            completion()
         })
     }
+    
+    private func getCurrentUsernameFormDB(completion: @escaping (String) -> () ) {
+        DatabaseService.getCurrentUserName(resCompletion: {username in
+            completion(username)
+        })
+    }
+    
+    func signUp(email: String, password: String, username: String, completionWithError: @escaping (String) -> ()) {
+        Auth.auth().createUser(withEmail: email, password: password) {[weak self]  authResult, error in
+            if error == nil {
+                guard let userID = Auth.auth().currentUser?.uid else { return }
+                DatabaseService.addUser(username: username, uid: userID)
+                print("UserId after auth: \(userID)")
+                self?.loginToSinch(username: username, completion: {
+                    self?.saveUsername(username: username)
+                    AppRouter.goToMainScreen()
+                })
+            }
+            else {
+                completionWithError(error!.localizedDescription)
+            }
+        }
+    }
+    
+    func signIn(email: String, password: String, completionWithError: @escaping (String) -> ()){
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            if error == nil{
+                guard let self = self else { return }
+                self.getCurrentUsernameFormDB(){username in
+                    DatabaseService.setCurrentUserToActive()
+                    self.loginToSinch(username: username, completion: {
+                        self.saveUsername(username: username)
+                        AppRouter.goToMainScreen()
+                    })
+                }
+            } else {
+                completionWithError(error!.localizedDescription)
+            }
+        }
+    }
+
 }

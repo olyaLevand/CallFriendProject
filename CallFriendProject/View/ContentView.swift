@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         switch contentViewPresenter.state{
-        case .login: LoginView(presenter: LoginViewPresenter(callMediator: contentViewPresenter.callMeadiator))
+        case .login: AuthView(presenter: LoginViewPresenter(callMediator: contentViewPresenter.callMeadiator))
         case .main:
             MainView(presenter: MainViewPresenter(callMeaditor: contentViewPresenter.callMeadiator))
         case .call:

@@ -82,8 +82,9 @@ extension CallMediator: CXProviderDelegate {
         action.fail()
         return
       }
-      sinchCall.hangup()
-
+      if let call = sinchCall{
+          call.hangup()
+      }
       action.fulfill()
     }
 }

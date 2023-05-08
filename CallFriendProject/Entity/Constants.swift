@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 class Constants{
-    
+    static var dbUserCollectionName = "users"
+    static var dbUsernameField = "username"
+    static var dbisActiveField = "isActive"
 }
 
 class AppColors{

@@ -10,6 +10,8 @@ import UIKit
 import SinchRTC
 import OSLog
 import PushToTalk
+import FirebaseCore
+import FirebaseAuth
 
 class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     var window: UIWindow?
@@ -59,6 +61,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
                 }
             })
         }
+        FirebaseApp.configure()
+   
       return true
     }
     

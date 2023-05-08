@@ -60,7 +60,7 @@ final class CallFriendProjectUITests: XCTestCase {
         let helloOlyaStaticText = app.staticTexts[newViewLabelText]
         
         XCTAssertTrue(helloOlyaStaticText.exists)
-    }
+    }    
      
     func testMainViewAlert(){
         

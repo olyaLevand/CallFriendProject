@@ -38,9 +38,16 @@ class MainViewPresenter: ObservableObject{
         callMediator.setCallType(callType)
     }
     
+    func getActiveUsers(completion: @escaping ([String]) -> ()){
+        DatabaseService.getActiveUsers(completion: {users in
+            completion(users)
+        })
+    }
+    
     func logout(){
         callMediator.logout()
         clearUserData()
+        DatabaseService.setCurrentUserToInActive()
         AppRouter.goToLoginlScreen()
     }
 }

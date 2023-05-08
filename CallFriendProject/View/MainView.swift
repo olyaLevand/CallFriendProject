@@ -14,25 +14,44 @@ struct MainView: View {
     @State var calleeName: String = ""
     @State var option: ConnectOption = .normalCall
     @State var presentAlert: Bool = false
+    @State var activeUsers: [String] = []
     
     var body: some View {
+        NavigationStack {
             VStack(spacing: 30){
                 HStack{
                     Spacer()
-                    Button("Logout"){
-                        presenter.logout()
-                    }    .padding(.horizontal)
-                        .padding(.vertical, 10)
-                        .foregroundColor(.white)
-                        .background(AppColors.darkBlueColor)
-                        .cornerRadius(10)
-                        .padding()
-                        .font(.headline)
-                        .cornerRadius(15)
-                }
-                
-                Spacer()
-                
+                    VStack(alignment: .trailing, spacing: 10){
+                        Button("Log out"){
+                            presenter.logout()
+                        }    .padding(.horizontal)
+                            .padding(.vertical, 10)
+                            .foregroundColor(.white)
+                            .background(AppColors.darkBlueColor)
+                            .cornerRadius(10)
+                            .font(.headline)
+                            .cornerRadius(15)
+                            VStack{
+                                NavigationLink{
+                                    ActiveUsersView(activeUsers: $activeUsers)
+                                        .onAppear{
+                                            presenter.getActiveUsers(completion: {users in
+                                                self.activeUsers = users
+                                            })
+                                        }
+                                } label: {
+                                    Text("Online users")
+                                        .padding(.horizontal)
+                                        .padding(.vertical, 10)
+                                        .foregroundColor(.white)
+                                        .background(AppColors.grayColor)
+                                        .cornerRadius(10)
+                                        .font(.headline)
+                                        .cornerRadius(15)
+                                }
+                            }
+                    }.padding()
+                }.padding(.bottom, 100)
                 Text("Hello, \(presenter.getUsername())")
                     .foregroundColor(AppColors.darkBlueColor)
                     .font(.largeTitle)
@@ -95,6 +114,7 @@ struct MainView: View {
                             presentAlert = false
                         }
                     }
+        }
     }
 }
 

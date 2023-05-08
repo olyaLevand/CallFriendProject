@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>218622961074-cncbn59nc38e1e4ea01f0ib46u2uunu4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.218622961074-cncbn59nc38e1e4ea01f0ib46u2uunu4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAnhmbJNMzEqMtEPx3o69MZjoZDJdyrGXk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>218622961074</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.myapp.cf</string>
+	<key>PROJECT_ID</key>
+	<string>callfriend-50241</string>
+	<key>STORAGE_BUCKET</key>
+	<string>callfriend-50241.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:218622961074:ios:b803687d0d3aed9daef0ab</string>
+	<key>DATABASE_URL</key>
+	<string>https://callfriend-50241-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>
