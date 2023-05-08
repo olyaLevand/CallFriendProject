@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct SignUpView: View {
     
@@ -88,11 +89,13 @@ struct SignUpView: View {
                     .padding(40)
             })
             
-        }.alert("Please, enter all cedentials", isPresented: $showAlert) {
+        }
+        .alert("Please, enter all cedentials", isPresented: $showAlert) {
                     Button("OK", role: .cancel) {
                         showAlert = false
                     }
                 }
+
         .padding(0)
     }
 }

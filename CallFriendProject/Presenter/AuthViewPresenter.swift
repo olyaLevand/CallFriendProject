@@ -9,11 +9,13 @@ import Foundation
 import Combine
 import Firebase
 
-class LoginViewPresenter: ObservableObject{
+class AuthViewPresenter: ObservableObject{
     
     let router = AppRouter()
     var callMediator: CallMediator
     
+    @Published var showActivityIndicator = false
+
     init(callMediator: CallMediator){
         self.callMediator = callMediator
         Auth.auth().addStateDidChangeListener { auth, user in
@@ -47,6 +49,7 @@ class LoginViewPresenter: ObservableObject{
     }
     
     func signUp(email: String, password: String, username: String, completionWithError: @escaping (String) -> ()) {
+        showActivityIndicator = true
         Auth.auth().createUser(withEmail: email, password: password) {[weak self]  authResult, error in
             if error == nil {
                 guard let userID = Auth.auth().currentUser?.uid else { return }
@@ -54,6 +57,7 @@ class LoginViewPresenter: ObservableObject{
                 print("UserId after auth: \(userID)")
                 self?.loginToSinch(username: username, completion: {
                     self?.saveUsername(username: username)
+                    self?.showActivityIndicator = true
                     AppRouter.goToMainScreen()
                 })
             }
@@ -64,6 +68,7 @@ class LoginViewPresenter: ObservableObject{
     }
     
     func signIn(email: String, password: String, completionWithError: @escaping (String) -> ()){
+        showActivityIndicator = true
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             if error == nil{
                 guard let self = self else { return }
@@ -71,6 +76,7 @@ class LoginViewPresenter: ObservableObject{
                     DatabaseService.setCurrentUserToActive()
                     self.loginToSinch(username: username, completion: {
                         self.saveUsername(username: username)
+                        self.showActivityIndicator = false
                         AppRouter.goToMainScreen()
                     })
                 }

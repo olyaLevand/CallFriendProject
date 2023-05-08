@@ -14,8 +14,8 @@
             filePath = "CallFriendProject/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -317,6 +317,21 @@
                   endingLineNumber = "20"
                   offsetFromSymbolStart = "2580">
                </Location>
+               <Location
+                  uuid = "A4EFD8CD-D281-49C3-AC04-8FF96D70F33D - f1006e87447ac4f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CallFriendProject.ContentView.body.getter : some"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/View/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "2644">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -467,14 +482,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "320207BE-B639-417E-973C-F06FA79D4E5C"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CallFriendProject/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
             <Locations>
@@ -538,6 +553,36 @@
                   endingLineNumber = "57"
                   offsetFromSymbolStart = "188">
                </Location>
+               <Location
+                  uuid = "320207BE-B639-417E-973C-F06FA79D4E5C - b85fba0203f44e96"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CallFriendProject.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "940">
+               </Location>
+               <Location
+                  uuid = "320207BE-B639-417E-973C-F06FA79D4E5C - a61ae9f98c449b1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CallFriendProject.AppDelegate.application(_: __C.UIApplication, didFinishLaunchingWithOptions: Swift.Optional&lt;Swift.Dictionary&lt;__C.UIApplicationLaunchOptionsKey, Any&gt;&gt;) -&gt; Swift.Bool"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/AppDelegate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "188">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -551,8 +596,8 @@
             filePath = "CallFriendProject/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
             <Locations>
@@ -629,8 +674,8 @@
             filePath = "CallFriendProject/AppDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
             <Locations>
@@ -1013,6 +1058,38 @@
             endingLineNumber = "65"
             landmarkName = "getCurrentUserName(resCompletion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8A2F06D4-431B-4B4B-AB98-F390F722038A - e3ccf77e38cb66d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static CallFriendProject.DatabaseService.getCurrentUserName(resCompletion: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "628">
+               </Location>
+               <Location
+                  uuid = "8A2F06D4-431B-4B4B-AB98-F390F722038A - d5855c71f9aad5da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CallFriendProject.DatabaseService.getCurrentUserName(resCompletion: (Swift.String) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1045,6 +1122,38 @@
             endingLineNumber = "86"
             landmarkName = "getActiveUsers(completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7925AD72-D6A0-4AF5-9FBF-19A29924C982 - 6e91e2f3d4d24e6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CallFriendProject.DatabaseService.getActiveUsers(completion: (Swift.Array&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "1132">
+               </Location>
+               <Location
+                  uuid = "7925AD72-D6A0-4AF5-9FBF-19A29924C982 - 6e91e2f3d4d24e6f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CallFriendProject.DatabaseService.getActiveUsers(completion: (Swift.Array&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "1456">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1061,6 +1170,38 @@
             endingLineNumber = "85"
             landmarkName = "getActiveUsers(completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "39574A8A-E571-4FC5-BDEE-9CC00B4F891B - 6e91e2f3d4d24e0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CallFriendProject.DatabaseService.getActiveUsers(completion: (Swift.Array&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "39574A8A-E571-4FC5-BDEE-9CC00B4F891B - 4086fd3fd249dbaa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.FIRQueryDocumentSnapshot) -&gt; Swift.String in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CallFriendProject.DatabaseService.getActiveUsers(completion: (Swift.Array&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "100">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1077,6 +1218,38 @@
             endingLineNumber = "87"
             landmarkName = "getActiveUsers(completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5ADAE10E-22B3-4796-9562-CAD77B8F2E11 - 6e91e2f3d4d24e48"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CallFriendProject.DatabaseService.getActiveUsers(completion: (Swift.Array&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "1700">
+               </Location>
+               <Location
+                  uuid = "5ADAE10E-22B3-4796-9562-CAD77B8F2E11 - 47676bdcc52655af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.String) -&gt; Swift.Bool in closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CallFriendProject.DatabaseService.getActiveUsers(completion: (Swift.Array&lt;Swift.String&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "CallFriendProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/olyalevandivska/Desktop/CallFriendProject-main/CallFriendProject/Entity/DatabaseService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1251,6 +1424,22 @@
             startingLineNumber = "54"
             endingLineNumber = "54"
             landmarkName = "signUp(email:password:username:completionWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E5218263-CFBB-41F8-BB9C-4876CF344D36"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CallFriendProject/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

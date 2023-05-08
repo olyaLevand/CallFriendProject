@@ -13,7 +13,7 @@ class ContentViewPresenter: ObservableObject {
     let callMeadiator: CallMediator
     let router = AppRouter()
 
-    @Published var state: AppRouter.RouterState = .login
+    @Published var state: AppRouter.RouterState = .preview
     private var cancellables = Set<AnyCancellable>()
 
     init(callMeadiator: CallMediator) {

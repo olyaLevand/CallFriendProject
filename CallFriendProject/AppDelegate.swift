@@ -23,9 +23,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         UNUserNotificationCenter.current().delegate = self
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) {
             (granted, error) in
-            // 1. Check to see if permission is granted
             guard granted else { return }
-            // 2. Attempt registration for remote notifications on the main thread
             DispatchQueue.main.async {
                 UIApplication.shared.registerForRemoteNotifications()
             }
@@ -33,10 +31,6 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     }
     
     func applicationWillEnterForeground(_ application: UIApplication) {
-      // If there is one established or initiating call, show the callView of the
-      // current call when the App is brought to foreground. This is mainly to handle
-      // the UI transition when clicking the App icon on the lockscreen CallKit UI,
-      // and the UI transition when an incoming call is answered from homescreen CallKit UI.
         self.trancitionToCallView()
     }
     
@@ -60,10 +54,11 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
                     }
                 }
             })
+        }else {
+            AppRouter.goToLoginlScreen()
         }
         FirebaseApp.configure()
-   
-      return true
+        return true
     }
     
     func handlePushNotification(withInfo info: [AnyHashable: Any]) {

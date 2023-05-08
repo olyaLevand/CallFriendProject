@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import AlertToast
 
 
 struct AuthView: View {
@@ -15,7 +16,7 @@ struct AuthView: View {
         case signin
     }
     
-    @ObservedObject var presenter: LoginViewPresenter
+    @ObservedObject var presenter: AuthViewPresenter
 
     @State var viewState: ViewState = .login
     @State var username: String = ""
@@ -24,7 +25,7 @@ struct AuthView: View {
     
     @State var showError = false
     @State var errorMessage: String = ""
-    
+
     var body: some View {
         VStack{
             switch viewState{
@@ -35,6 +36,10 @@ struct AuthView: View {
             Button("OK", role: .cancel) {
                 showError = false
             }
+            
+        }
+        .toast(isPresenting: $presenter.showActivityIndicator){
+            AlertToast(type: .loading, title: "Processing data")
         }
     }
     

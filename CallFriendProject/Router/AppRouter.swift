@@ -11,10 +11,10 @@ import Combine
 class AppRouter: ObservableObject{
     
     enum RouterState{
-        case login, main, call
+        case login, main, call, preview
     }
     
-    @Published var state: RouterState = .login
+    @Published var state: RouterState = .preview
     
     init(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.openMainScreen), name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)

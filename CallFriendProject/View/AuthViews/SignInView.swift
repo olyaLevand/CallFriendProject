@@ -22,7 +22,7 @@ struct SignInView: View {
     @Binding var password: String
     @State var passwordAlert: Bool = false
     @State var usernameAlert: Bool = false
-    
+
     var body: some View {
         VStack(alignment: .center){
             Text("Sign In")
@@ -100,7 +100,8 @@ struct SignInView: View {
             
 
             
-        }.alert("Please, enter username", isPresented: $usernameAlert) {
+        }
+        .alert("Please, enter username", isPresented: $usernameAlert) {
                     Button("OK", role: .cancel) {
                         usernameAlert = false
                     }

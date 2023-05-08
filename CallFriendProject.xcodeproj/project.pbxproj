@@ -24,12 +24,10 @@
 		003DC06629E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06529E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift */; };
 		003DC06A29E211A700034A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06929E211A700034A80 /* AppDelegate.swift */; };
 		004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C41FF29DDB1A3000ECC93 /* AppRouter.swift */; };
-		004C420829E0272A000ECC93 /* CallFriendProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */; };
-		004C420A29E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C420929E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift */; };
 		004C421229E05C0E000ECC93 /* CallInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421129E05C0E000ECC93 /* CallInteractor.swift */; };
 		004C421529E065B2000ECC93 /* ContentViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421429E065B2000ECC93 /* ContentViewPresenter.swift */; };
 		004C421729E06FDB000ECC93 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421629E06FDB000ECC93 /* UserSetting.swift */; };
-		004C421929E07076000ECC93 /* LoginViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421829E07076000ECC93 /* LoginViewPresenter.swift */; };
+		004C421929E07076000ECC93 /* AuthViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421829E07076000ECC93 /* AuthViewPresenter.swift */; };
 		004C421B29E07220000ECC93 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421A29E07220000ECC93 /* MainViewPresenter.swift */; };
 		004C421E29E076A1000ECC93 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 004C421D29E076A1000ECC93 /* AlertToast */; };
 		004C422029E07EB0000ECC93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421F29E07EB0000ECC93 /* Constants.swift */; };
@@ -43,6 +41,7 @@
 		00C199C82A068D3D00732115 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199C72A068D3D00732115 /* DatabaseService.swift */; };
 		00C199CA2A091C3F00732115 /* DBUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199C92A091C3F00732115 /* DBUserData.swift */; };
 		00C199CC2A0938B200732115 /* ActiveUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199CB2A0938B200732115 /* ActiveUsersView.swift */; };
+		00C199CE2A09574700732115 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199CD2A09574700732115 /* SplashView.swift */; };
 		0F0632BE27FDD93800B72652 /* CallFriendProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */; };
 		0F0632C027FDD93800B72652 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632BF27FDD93800B72652 /* ContentView.swift */; };
 		0F0632C227FDD93C00B72652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0632C127FDD93C00B72652 /* Assets.xcassets */; };
@@ -57,16 +56,6 @@
 		0F577A53281EAC8B00954D4B /* Call.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F577A52281EAC8B00954D4B /* Call.swift */; };
 		0FEA17982807166D00B6B8B3 /* NotificationEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		004C420B29E0272A000ECC93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0F0632B227FDD93800B72652 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0F0632B927FDD93800B72652;
-			remoteInfo = CallFriendProject;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		003DC05229E2035B00034A80 /* Embed Frameworks */ = {
@@ -99,13 +88,10 @@
 		003DC06829E2111300034A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		003DC06929E211A700034A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		004C41FF29DDB1A3000ECC93 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		004C420529E02729000ECC93 /* CallFriendProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallFriendProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectUITests.swift; sourceTree = "<group>"; };
-		004C420929E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		004C421129E05C0E000ECC93 /* CallInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallInteractor.swift; sourceTree = "<group>"; };
 		004C421429E065B2000ECC93 /* ContentViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewPresenter.swift; sourceTree = "<group>"; };
 		004C421629E06FDB000ECC93 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
-		004C421829E07076000ECC93 /* LoginViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewPresenter.swift; sourceTree = "<group>"; };
+		004C421829E07076000ECC93 /* AuthViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewPresenter.swift; sourceTree = "<group>"; };
 		004C421A29E07220000ECC93 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
 		004C421F29E07EB0000ECC93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		00C199B529FAE43A00732115 /* CallViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewPresenter.swift; sourceTree = "<group>"; };
@@ -116,6 +102,7 @@
 		00C199C72A068D3D00732115 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		00C199C92A091C3F00732115 /* DBUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUserData.swift; sourceTree = "<group>"; };
 		00C199CB2A0938B200732115 /* ActiveUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUsersView.swift; sourceTree = "<group>"; };
+		00C199CD2A09574700732115 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0F0632BA27FDD93800B72652 /* CallFriendProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallFriendProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallFriendProjectApp.swift; sourceTree = "<group>"; };
 		0F0632BF27FDD93800B72652 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,13 +120,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		004C420229E02729000ECC93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0F0632B727FDD93800B72652 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,15 +198,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		004C420629E0272A000ECC93 /* CallFriendProjectUITests */ = {
-			isa = PBXGroup;
-			children = (
-				004C420729E0272A000ECC93 /* CallFriendProjectUITests.swift */,
-				004C420929E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift */,
-			);
-			path = CallFriendProjectUITests;
-			sourceTree = "<group>";
-		};
 		004C421029E05BF6000ECC93 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				004C421429E065B2000ECC93 /* ContentViewPresenter.swift */,
-				004C421829E07076000ECC93 /* LoginViewPresenter.swift */,
+				004C421829E07076000ECC93 /* AuthViewPresenter.swift */,
 				004C421A29E07220000ECC93 /* MainViewPresenter.swift */,
 				00C199B529FAE43A00732115 /* CallViewPresenter.swift */,
 			);
@@ -261,7 +232,6 @@
 			isa = PBXGroup;
 			children = (
 				0F0632BC27FDD93800B72652 /* CallFriendProject */,
-				004C420629E0272A000ECC93 /* CallFriendProjectUITests */,
 				0F0632BB27FDD93800B72652 /* Products */,
 				003DC04E29E2035B00034A80 /* Frameworks */,
 			);
@@ -271,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				0F0632BA27FDD93800B72652 /* CallFriendProject.app */,
-				004C420529E02729000ECC93 /* CallFriendProjectUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -312,6 +281,7 @@
 				0F06331E280339E800B72652 /* MainView.swift */,
 				0F0632BF27FDD93800B72652 /* ContentView.swift */,
 				00C199CB2A0938B200732115 /* ActiveUsersView.swift */,
+				00C199CD2A09574700732115 /* SplashView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,24 +302,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		004C420429E02729000ECC93 /* CallFriendProjectUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 004C420D29E0272A000ECC93 /* Build configuration list for PBXNativeTarget "CallFriendProjectUITests" */;
-			buildPhases = (
-				004C420129E02729000ECC93 /* Sources */,
-				004C420229E02729000ECC93 /* Frameworks */,
-				004C420329E02729000ECC93 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				004C420C29E0272A000ECC93 /* PBXTargetDependency */,
-			);
-			name = CallFriendProjectUITests;
-			productName = CallFriendProjectUITests;
-			productReference = 004C420529E02729000ECC93 /* CallFriendProjectUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		0F0632B927FDD93800B72652 /* CallFriendProject */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F0632C827FDD93C00B72652 /* Build configuration list for PBXNativeTarget "CallFriendProject" */;
@@ -385,10 +337,6 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					004C420429E02729000ECC93 = {
-						CreatedOnToolsVersion = 14.3;
-						TestTargetID = 0F0632B927FDD93800B72652;
-					};
 					0F0632B927FDD93800B72652 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -414,19 +362,11 @@
 			projectRoot = "";
 			targets = (
 				0F0632B927FDD93800B72652 /* CallFriendProject */,
-				004C420429E02729000ECC93 /* CallFriendProjectUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		004C420329E02729000ECC93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0F0632B827FDD93800B72652 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -442,15 +382,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		004C420129E02729000ECC93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				004C420A29E0272A000ECC93 /* CallFriendProjectUITestsLaunchTests.swift in Sources */,
-				004C420829E0272A000ECC93 /* CallFriendProjectUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0F0632B627FDD93800B72652 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +403,7 @@
 				003DC05C29E20B2B00034A80 /* CallMediator+CXProviderDelegate.swift in Sources */,
 				0F06331127FF0CBD00B72652 /* VideoView.swift in Sources */,
 				00C199B829FC10F600732115 /* VideoSwiftUIView.swift in Sources */,
+				00C199CE2A09574700732115 /* SplashView.swift in Sources */,
 				0F577A4B281EA73500954D4B /* OutgoingCallView.swift in Sources */,
 				0F577A48281EA70100954D4B /* IncommingCallView.swift in Sources */,
 				003DC06429E20CCC00034A80 /* CallMediator+SinchCallDelegate.swift in Sources */,
@@ -485,7 +417,7 @@
 				004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */,
 				0F0633182802E9C700B72652 /* SignInView.swift in Sources */,
 				00C199CA2A091C3F00732115 /* DBUserData.swift in Sources */,
-				004C421929E07076000ECC93 /* LoginViewPresenter.swift in Sources */,
+				004C421929E07076000ECC93 /* AuthViewPresenter.swift in Sources */,
 				003DC05429E2046100034A80 /* Config.swift in Sources */,
 				003DC04C29E2018100034A80 /* CallMediator.swift in Sources */,
 				003DC04829E1FC1400034A80 /* CallViewRouter.swift in Sources */,
@@ -495,53 +427,7 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		004C420C29E0272A000ECC93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0F0632B927FDD93800B72652 /* CallFriendProject */;
-			targetProxy = 004C420B29E0272A000ECC93 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		004C420E29E0272A000ECC93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P6739FAT5K;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.cf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CallFriendProject;
-			};
-			name = Debug;
-		};
-		004C420F29E0272A000ECC93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P6739FAT5K;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.cf;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CallFriendProject;
-			};
-			name = Release;
-		};
 		0F0632C627FDD93C00B72652 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -671,7 +557,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CallFriendProject/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "uses Camera for video calling";
+				INFOPLIST_KEY_CFBundleDisplayName = "Call Friend";
+				INFOPLIST_KEY_NSCameraUsageDescription = "uses camera for video calling";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone for voice calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -707,7 +594,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CallFriendProject/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "uses Camera for video calling";
+				INFOPLIST_KEY_CFBundleDisplayName = "Call Friend";
+				INFOPLIST_KEY_NSCameraUsageDescription = "uses camera for video calling";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Use microphone for voice calls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -733,15 +621,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		004C420D29E0272A000ECC93 /* Build configuration list for PBXNativeTarget "CallFriendProjectUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				004C420E29E0272A000ECC93 /* Debug */,
-				004C420F29E0272A000ECC93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		0F0632B527FDD93800B72652 /* Build configuration list for PBXProject "CallFriendProject" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
