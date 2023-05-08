@@ -55,7 +55,9 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
                 }
             })
         }else {
-            AppRouter.goToLoginlScreen()
+            DispatchQueue.main.async {
+                AppRouter.goToLoginlScreen()
+            }
         }
         FirebaseApp.configure()
         return true

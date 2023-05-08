@@ -11,7 +11,6 @@ import SinchRTC
 
 class CallViewPresenter: ObservableObject {
     
-    let router = CallViewRoter()
     var callMediator: CallMediator
     @Published var call: Call? 
     

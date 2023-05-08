@@ -62,6 +62,7 @@ class AuthViewPresenter: ObservableObject{
                 })
             }
             else {
+                self?.showActivityIndicator = false
                 completionWithError(error!.localizedDescription)
             }
         }
@@ -81,6 +82,7 @@ class AuthViewPresenter: ObservableObject{
                     })
                 }
             } else {
+                self?.showActivityIndicator = false
                 completionWithError(error!.localizedDescription)
             }
         }
