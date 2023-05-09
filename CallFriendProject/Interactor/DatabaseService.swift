@@ -90,4 +90,19 @@ class DatabaseService{
                 }
         }
     }
+    
+    static func usernameExist(username: String, completion: @escaping (Bool) -> ()){
+        DatabaseService.db.collection(DatabaseService.collectionName)
+            .whereField(DatabaseService.usernameField, isEqualTo: username)
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    if querySnapshot!.documents.count > 0 {
+                        completion(true)
+                    }
+                    completion(false)
+                }
+        }
+    }
 }

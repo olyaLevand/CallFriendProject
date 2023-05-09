@@ -135,13 +135,11 @@
 		003DC04D29E2019F00034A80 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				003DC05A29E20AFC00034A80 /* CallMediator */,
 				0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */,
 				0F577A52281EAC8B00954D4B /* Call.swift */,
 				004C421629E06FDB000ECC93 /* UserSetting.swift */,
 				004C421F29E07EB0000ECC93 /* Constants.swift */,
 				003DC05329E2046100034A80 /* Config.swift */,
-				00C199C72A068D3D00732115 /* DatabaseService.swift */,
 				00C199C92A091C3F00732115 /* DBUserData.swift */,
 			);
 			path = Entity;
@@ -189,6 +187,8 @@
 		004C421029E05BF6000ECC93 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				003DC05A29E20AFC00034A80 /* CallMediator */,
+				00C199C72A068D3D00732115 /* DatabaseService.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -548,6 +548,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -585,6 +586,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

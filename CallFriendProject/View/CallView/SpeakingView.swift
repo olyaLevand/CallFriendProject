@@ -13,7 +13,7 @@ struct SpeakingView: View {
     
     var body: some View {
         VStack{
-            Text("Conversation with \n\(speaker)")
+            Text("\(speaker)")
                 .multilineTextAlignment(.center)
                 .foregroundColor(AppColors.darkBlueColor)
                 .font(.largeTitle)

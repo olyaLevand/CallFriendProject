@@ -86,5 +86,6 @@ extension CallMediator: CXProviderDelegate {
           call.hangup()
       }
       action.fulfill()
+        self.call = nil
     }
 }

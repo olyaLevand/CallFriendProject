@@ -15,7 +15,7 @@ struct OutgoingCallView: View {
     var body: some View {
         VStack{
             Text("Calling to \(callee)")
-                .foregroundColor(AppColors.yellowColor)
+                .foregroundColor(AppColors.darkBlueColor)
                 .multilineTextAlignment(.center)
                 .font(.largeTitle)
                 .padding(20)

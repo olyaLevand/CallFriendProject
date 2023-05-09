@@ -82,7 +82,7 @@ struct SignUpView: View {
             Spacer()
             
             Button(action: {swichAction()}, label: {
-                Text("Already have a account? Click to sign in")
+                Text("Already have a account? Click to Sign In")
                     .multilineTextAlignment(.center)
                     .foregroundColor(AppColors.darkBlueColor)
                     .font(.headline)

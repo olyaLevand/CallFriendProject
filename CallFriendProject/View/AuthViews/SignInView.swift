@@ -38,7 +38,7 @@ struct SignInView: View {
 
             
             TextField(
-                " Username ",
+                " Email ",
                 text: $username
             )
             .frame(width: UIScreen.main.bounds.width*0.6)

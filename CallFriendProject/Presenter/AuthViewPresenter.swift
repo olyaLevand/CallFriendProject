@@ -50,26 +50,36 @@ class AuthViewPresenter: ObservableObject{
     
     func signUp(email: String, password: String, username: String, completionWithError: @escaping (String) -> ()) {
         showActivityIndicator = true
-        Auth.auth().createUser(withEmail: email, password: password) {[weak self]  authResult, error in
-            if error == nil {
-                guard let userID = Auth.auth().currentUser?.uid else { return }
-                DatabaseService.addUser(username: username, uid: userID)
-                print("UserId after auth: \(userID)")
-                self?.loginToSinch(username: username, completion: {
-                    self?.saveUsername(username: username)
-                    self?.showActivityIndicator = true
-                    AppRouter.goToMainScreen()
-                })
+        DatabaseService.usernameExist(username: username, completion: { exist in
+            if exist {
+                self.showActivityIndicator = false
+                completionWithError("Username already exist")
+            } else{
+                Auth.auth().createUser(withEmail: email, password: password) {[weak self]  authResult, error in
+                    if error == nil {
+                        guard let userID = Auth.auth().currentUser?.uid else { return }
+                        DatabaseService.addUser(username: username, uid: userID)
+                        print("UserId after auth: \(userID)")
+                        self?.loginToSinch(username: username, completion: {
+                            self?.saveUsername(username: username)
+                            self?.showActivityIndicator = true
+                            AppRouter.goToMainScreen()
+                        })
+                    }
+                    else {
+                        self?.showActivityIndicator = false
+                        completionWithError(error!.localizedDescription)
+                    }
+                }
             }
-            else {
-                self?.showActivityIndicator = false
-                completionWithError(error!.localizedDescription)
-            }
-        }
+        })
+
+
     }
     
     func signIn(email: String, password: String, completionWithError: @escaping (String) -> ()){
         showActivityIndicator = true
+        
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             if error == nil{
                 guard let self = self else { return }

@@ -15,5 +15,6 @@ struct CallFriendProjectApp: App {
         WindowGroup {
             ContentView(contentViewPresenter: ContentViewPresenter(callMeadiator: appDelegate.callKitMediator))
         }
+        
     }
 }

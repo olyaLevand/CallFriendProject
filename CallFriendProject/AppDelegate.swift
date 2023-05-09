@@ -30,7 +30,7 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
         }
     }
     
-    func applicationWillEnterForeground(_ application: UIApplication) {
+    func applicationDidBecomeActive(_ application: UIApplication) {
         self.trancitionToCallView()
     }
     
@@ -39,11 +39,11 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
       SinchRTC.setLogCallback { (severity: SinchRTC.LogSeverity, area: String, msg: String, _: Date) in
           os_log("%{public}@", log: OSLog(subsystem: "com.sinch.sdk.app", category: area), type: .default , msg)
       }
+        self.callKitMediator = CallMediator(delegate: self)
 
       self.push = SinchRTC.managedPush(forAPSEnvironment: SinchRTC.APSEnvironment.development)
       self.push.delegate = self
       self.push.setDesiredPushType(SinchManagedPush.TypeVoIP)        
-      self.callKitMediator = CallMediator(delegate: self)
       registerForPushNotifications()
         
         if let username = UserDefaults.standard.string(forKey: UserSettingKey.name){
@@ -70,7 +70,9 @@ class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCenterDele
     }
     
     func trancitionToCallView(){
-        AppRouter.goTpCallScreen()
+        DispatchQueue.main.async {
+            AppRouter.goTpCallScreen()
+        }
     }
 }
 
