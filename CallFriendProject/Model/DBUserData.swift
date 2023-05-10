@@ -7,7 +7,4 @@
 
 import Foundation
 
-public struct DBUserData: Codable{
-    let username: String
-    let isActive: Bool
-}
+

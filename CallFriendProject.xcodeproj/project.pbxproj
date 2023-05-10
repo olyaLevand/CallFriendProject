@@ -37,7 +37,6 @@
 		00C199C42A05685400732115 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199C32A05685400732115 /* AuthView.swift */; };
 		00C199C62A056ECD00732115 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 00C199C52A056ECC00732115 /* GoogleService-Info.plist */; };
 		00C199C82A068D3D00732115 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199C72A068D3D00732115 /* DatabaseService.swift */; };
-		00C199CA2A091C3F00732115 /* DBUserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199C92A091C3F00732115 /* DBUserData.swift */; };
 		00C199CC2A0938B200732115 /* ActiveUsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199CB2A0938B200732115 /* ActiveUsersView.swift */; };
 		00C199CE2A09574700732115 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199CD2A09574700732115 /* SplashView.swift */; };
 		0F0632BE27FDD93800B72652 /* CallFriendProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */; };
@@ -96,7 +95,6 @@
 		00C199C32A05685400732115 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		00C199C52A056ECC00732115 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		00C199C72A068D3D00732115 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
-		00C199C92A091C3F00732115 /* DBUserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBUserData.swift; sourceTree = "<group>"; };
 		00C199CB2A0938B200732115 /* ActiveUsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveUsersView.swift; sourceTree = "<group>"; };
 		00C199CD2A09574700732115 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		0F0632BA27FDD93800B72652 /* CallFriendProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallFriendProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,7 +201,6 @@
 				004C421629E06FDB000ECC93 /* UserSetting.swift */,
 				004C421F29E07EB0000ECC93 /* Constants.swift */,
 				003DC05329E2046100034A80 /* Config.swift */,
-				00C199C92A091C3F00732115 /* DBUserData.swift */,
 				00C199C72A068D3D00732115 /* DatabaseService.swift */,
 			);
 			path = Model;
@@ -394,7 +391,6 @@
 				0FEA17982807166D00B6B8B3 /* NotificationEvent.swift in Sources */,
 				004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */,
 				0F0633182802E9C700B72652 /* SignInView.swift in Sources */,
-				00C199CA2A091C3F00732115 /* DBUserData.swift in Sources */,
 				004C421929E07076000ECC93 /* AuthViewModel.swift in Sources */,
 				003DC05429E2046100034A80 /* Config.swift in Sources */,
 				003DC04C29E2018100034A80 /* CallMediator.swift in Sources */,

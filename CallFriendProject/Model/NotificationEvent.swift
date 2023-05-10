@@ -9,7 +9,7 @@ import Foundation
 
 
 enum NotificationEvent: String{
-    case loggedIn = "loggedIn"
+    case openMainView = "openMainView"
     case openCallView = "openCallView"
     case openLoginScreen = "openLoginView"
 }

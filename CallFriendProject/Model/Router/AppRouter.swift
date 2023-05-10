@@ -17,7 +17,7 @@ class AppRouter: ObservableObject{
     @Published var state: RouterState = .preview
     
     init(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.openMainScreen), name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.openMainScreen), name: Notification.Name(NotificationEvent.openMainView.rawValue), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.openCallScreen), name: Notification.Name(NotificationEvent.openCallView.rawValue), object: nil)
         
@@ -25,7 +25,7 @@ class AppRouter: ObservableObject{
     }
     
     static func goToMainScreen(){
-        NotificationCenter.default.post(name: Notification.Name(NotificationEvent.loggedIn.rawValue), object: nil)
+        NotificationCenter.default.post(name: Notification.Name(NotificationEvent.openMainView.rawValue), object: nil)
     }
     
     static func goTpCallScreen(){
