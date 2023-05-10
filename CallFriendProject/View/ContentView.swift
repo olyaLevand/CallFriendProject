@@ -9,23 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var contentViewPresenter: ContentViewPresenter
+    @ObservedObject var contentViewModel: ContentViewModel
     @Environment(\.scenePhase) var scenePhase
     
     var body: some View {
         VStack{
-            switch contentViewPresenter.state{
-            case .login: AuthView(presenter: AuthViewPresenter(callMediator: contentViewPresenter.callMeadiator))
+            switch contentViewModel.state{
+            case .login: AuthView(viewModel: AuthViewModel(callMediator: contentViewModel.callMeadiator))
             case .main:
-                MainView(presenter: MainViewPresenter(callMeaditor: contentViewPresenter.callMeadiator))
+                MainView(viewModel: MainViewModel(callMeaditor: contentViewModel.callMeadiator))
             case .call:
-                CallView(presenter: CallViewPresenter(callMediator: contentViewPresenter.callMeadiator))
+                CallView(viewModel: CallViewModel(callMediator: contentViewModel.callMeadiator))
             case .preview:
                 SplashView()
             }
         }.onChange(of: scenePhase){ phase in
-            if phase == .active && contentViewPresenter.callMeadiator.call != nil {
-                contentViewPresenter.state = .call
+            if phase == .active && contentViewModel.callMeadiator.call != nil {
+                contentViewModel.state = .call
 
             }
         }

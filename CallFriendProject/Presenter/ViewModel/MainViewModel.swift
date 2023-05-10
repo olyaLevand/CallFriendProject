@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import UIKit
 
-class MainViewPresenter: ObservableObject{
+class MainViewModel: ObservableObject{
     
     var callMediator: CallMediator
     

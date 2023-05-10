@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ContentViewPresenter: ObservableObject {
+class ContentViewModel: ObservableObject {
     
     let callMeadiator: CallMediator
     let router = AppRouter()

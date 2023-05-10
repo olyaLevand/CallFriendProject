@@ -9,21 +9,21 @@ import SwiftUI
 
 struct CallView: View {
     
-    @ObservedObject var presenter: CallViewPresenter
+    @ObservedObject var viewModel: CallViewModel
     
     var body: some View {
-        switch presenter.call?.state{
+        switch viewModel.call?.state{
         case .initiating:
-            if presenter.call!.direction == .outgoing {
-                OutgoingCallView(haungUpAction: presenter.hangUpCall, callee: presenter.call?.destination ?? "")
+            if viewModel.call!.direction == .outgoing {
+                OutgoingCallView(haungUpAction: viewModel.hangUpCall, callee: viewModel.call?.destination ?? "")
             }else {
-                IncommingCallView(acceptCallAction: presenter.acceptCall, hungUpAction: presenter.hangUpCall, caller: presenter.getUsername() , speaker: presenter.call?.destination ?? "" )
+                IncommingCallView(acceptCallAction: viewModel.acceptCall, hungUpAction: viewModel.hangUpCall, caller: viewModel.getUsername() , speaker: viewModel.call?.destination ?? "" )
             }
         case .started:
-            if presenter.call!.callType == .video{
-                VideoView(client: presenter.callMediator.client!, destination: self.presenter.call?.destination ?? "", hangUpAction: presenter.hangUpCall)
+            if viewModel.call!.callType == .video{
+                VideoView(client: viewModel.callMediator.client!, destination: self.viewModel.call?.destination ?? "", hangUpAction: viewModel.hangUpCall)
             } else {
-                SpeakingView(speaker: presenter.call?.destination ?? "", hangUpAction: presenter.hangUpCall)
+                SpeakingView(speaker: viewModel.call?.destination ?? "", hangUpAction: viewModel.hangUpCall)
             }
         case .ended:
             EmptyView()

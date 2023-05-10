@@ -16,7 +16,7 @@ struct AuthView: View {
         case signin
     }
     
-    @ObservedObject var presenter: AuthViewPresenter
+    @ObservedObject var viewModel: AuthViewModel
 
     @State var viewState: ViewState = .login
     @State var username: String = ""
@@ -38,20 +38,20 @@ struct AuthView: View {
             }
             
         }
-        .toast(isPresenting: $presenter.showActivityIndicator){
+        .toast(isPresenting: $viewModel.showActivityIndicator){
             AlertToast(type: .loading, title: "Processing data")
         }
     }
     
     func signin(){
-        presenter.signIn(email: username, password: password, completionWithError: { error in
+        viewModel.signIn(email: username, password: password, completionWithError: { error in
             self.errorMessage = error
             self.showError = true
         })
     }
     
     func signup(){
-        presenter.signUp(email: email, password: password, username: username, completionWithError: { error in
+        viewModel.signUp(email: email, password: password, username: username, completionWithError: { error in
             self.errorMessage = error
             self.showError = true
         })

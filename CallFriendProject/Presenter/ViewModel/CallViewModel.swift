@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import SinchRTC
 
-class CallViewPresenter: ObservableObject {
+class CallViewModel: ObservableObject {
     
     var callMediator: CallMediator
     @Published var call: Call? 

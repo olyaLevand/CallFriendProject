@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import Firebase
 
-class AuthViewPresenter: ObservableObject{
+class AuthViewModel: ObservableObject{
     
     let router = AppRouter()
     var callMediator: CallMediator

@@ -23,13 +23,13 @@
 		003DC06629E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06529E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift */; };
 		003DC06A29E211A700034A80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003DC06929E211A700034A80 /* AppDelegate.swift */; };
 		004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C41FF29DDB1A3000ECC93 /* AppRouter.swift */; };
-		004C421529E065B2000ECC93 /* ContentViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421429E065B2000ECC93 /* ContentViewPresenter.swift */; };
+		004C421529E065B2000ECC93 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421429E065B2000ECC93 /* ContentViewModel.swift */; };
 		004C421729E06FDB000ECC93 /* UserSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421629E06FDB000ECC93 /* UserSetting.swift */; };
-		004C421929E07076000ECC93 /* AuthViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421829E07076000ECC93 /* AuthViewPresenter.swift */; };
-		004C421B29E07220000ECC93 /* MainViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421A29E07220000ECC93 /* MainViewPresenter.swift */; };
+		004C421929E07076000ECC93 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421829E07076000ECC93 /* AuthViewModel.swift */; };
+		004C421B29E07220000ECC93 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421A29E07220000ECC93 /* MainViewModel.swift */; };
 		004C421E29E076A1000ECC93 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 004C421D29E076A1000ECC93 /* AlertToast */; };
 		004C422029E07EB0000ECC93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004C421F29E07EB0000ECC93 /* Constants.swift */; };
-		00C199B629FAE43A00732115 /* CallViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199B529FAE43A00732115 /* CallViewPresenter.swift */; };
+		00C199B629FAE43A00732115 /* CallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199B529FAE43A00732115 /* CallViewModel.swift */; };
 		00C199B829FC10F600732115 /* VideoSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C199B729FC10F600732115 /* VideoSwiftUIView.swift */; };
 		00C199BB2A05669700732115 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 00C199BA2A05669700732115 /* FirebaseAuth */; };
 		00C199BD2A05669700732115 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 00C199BC2A05669700732115 /* FirebaseFirestore */; };
@@ -85,12 +85,12 @@
 		003DC06829E2111300034A80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		003DC06929E211A700034A80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		004C41FF29DDB1A3000ECC93 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		004C421429E065B2000ECC93 /* ContentViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewPresenter.swift; sourceTree = "<group>"; };
+		004C421429E065B2000ECC93 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		004C421629E06FDB000ECC93 /* UserSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSetting.swift; sourceTree = "<group>"; };
-		004C421829E07076000ECC93 /* AuthViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewPresenter.swift; sourceTree = "<group>"; };
-		004C421A29E07220000ECC93 /* MainViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewPresenter.swift; sourceTree = "<group>"; };
+		004C421829E07076000ECC93 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		004C421A29E07220000ECC93 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		004C421F29E07EB0000ECC93 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		00C199B529FAE43A00732115 /* CallViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewPresenter.swift; sourceTree = "<group>"; };
+		00C199B529FAE43A00732115 /* CallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallViewModel.swift; sourceTree = "<group>"; };
 		00C199B729FC10F600732115 /* VideoSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSwiftUIView.swift; sourceTree = "<group>"; };
 		00C199C12A05684800732115 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		00C199C32A05685400732115 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -132,19 +132,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		003DC04D29E2019F00034A80 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */,
-				0F577A52281EAC8B00954D4B /* Call.swift */,
-				004C421629E06FDB000ECC93 /* UserSetting.swift */,
-				004C421F29E07EB0000ECC93 /* Constants.swift */,
-				003DC05329E2046100034A80 /* Config.swift */,
-				00C199C92A091C3F00732115 /* DBUserData.swift */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		003DC04E29E2035B00034A80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,26 +171,6 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		004C421029E05BF6000ECC93 /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				003DC05A29E20AFC00034A80 /* CallMediator */,
-				00C199C72A068D3D00732115 /* DatabaseService.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		004C421329E0659D000ECC93 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				004C421429E065B2000ECC93 /* ContentViewPresenter.swift */,
-				004C421829E07076000ECC93 /* AuthViewPresenter.swift */,
-				004C421A29E07220000ECC93 /* MainViewPresenter.swift */,
-				00C199B529FAE43A00732115 /* CallViewPresenter.swift */,
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		00C199C02A05681900732115 /* AuthViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +179,34 @@
 				00C199C32A05685400732115 /* AuthView.swift */,
 			);
 			path = AuthViews;
+			sourceTree = "<group>";
+		};
+		00C199CF2A0BA78100732115 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				004C421429E065B2000ECC93 /* ContentViewModel.swift */,
+				004C421829E07076000ECC93 /* AuthViewModel.swift */,
+				004C421A29E07220000ECC93 /* MainViewModel.swift */,
+				00C199B529FAE43A00732115 /* CallViewModel.swift */,
+			);
+			name = ViewModel;
+			path = Presenter/ViewModel;
+			sourceTree = "<group>";
+		};
+		00C199D02A0BA79900732115 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				004C41FE29DDB195000ECC93 /* Router */,
+				003DC05A29E20AFC00034A80 /* CallMediator */,
+				0FEA17972807166D00B6B8B3 /* NotificationEvent.swift */,
+				0F577A52281EAC8B00954D4B /* Call.swift */,
+				004C421629E06FDB000ECC93 /* UserSetting.swift */,
+				004C421F29E07EB0000ECC93 /* Constants.swift */,
+				003DC05329E2046100034A80 /* Config.swift */,
+				00C199C92A091C3F00732115 /* DBUserData.swift */,
+				00C199C72A068D3D00732115 /* DatabaseService.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		0F0632B127FDD93800B72652 = {
@@ -238,10 +233,8 @@
 				003DC06829E2111300034A80 /* Info.plist */,
 				003DC06729E2110F00034A80 /* CallFriendProject.entitlements */,
 				003DC05529E2099300034A80 /* Supported files */,
-				003DC04D29E2019F00034A80 /* Entity */,
-				004C421329E0659D000ECC93 /* Presenter */,
-				004C421029E05BF6000ECC93 /* Interactor */,
-				004C41FE29DDB195000ECC93 /* Router */,
+				00C199CF2A0BA78100732115 /* ViewModel */,
+				00C199D02A0BA79900732115 /* Model */,
 				0F0632CB27FDDC3600B72652 /* View */,
 				0F0632BD27FDD93800B72652 /* CallFriendProjectApp.swift */,
 				0F0632C127FDD93C00B72652 /* Assets.xcassets */,
@@ -372,11 +365,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				004C421B29E07220000ECC93 /* MainViewPresenter.swift in Sources */,
+				004C421B29E07220000ECC93 /* MainViewModel.swift in Sources */,
 				003DC06229E20C8100034A80 /* CallMediator+SinchCallClientDelegate.swift in Sources */,
 				003DC06A29E211A700034A80 /* AppDelegate.swift in Sources */,
 				0F06331F280339E800B72652 /* MainView.swift in Sources */,
-				004C421529E065B2000ECC93 /* ContentViewPresenter.swift in Sources */,
+				004C421529E065B2000ECC93 /* ContentViewModel.swift in Sources */,
 				004C422029E07EB0000ECC93 /* Constants.swift in Sources */,
 				0F577A53281EAC8B00954D4B /* Call.swift in Sources */,
 				0F577A4D281EA74300954D4B /* SpeakingView.swift in Sources */,
@@ -393,7 +386,7 @@
 				0F577A48281EA70100954D4B /* IncommingCallView.swift in Sources */,
 				003DC06429E20CCC00034A80 /* CallMediator+SinchCallDelegate.swift in Sources */,
 				00C199CC2A0938B200732115 /* ActiveUsersView.swift in Sources */,
-				00C199B629FAE43A00732115 /* CallViewPresenter.swift in Sources */,
+				00C199B629FAE43A00732115 /* CallViewModel.swift in Sources */,
 				00C199C82A068D3D00732115 /* DatabaseService.swift in Sources */,
 				003DC06629E20DBE00034A80 /* CallMediator+SinchAudioControllerDelegate.swift in Sources */,
 				00C199C42A05685400732115 /* AuthView.swift in Sources */,
@@ -402,7 +395,7 @@
 				004C420029DDB1A3000ECC93 /* AppRouter.swift in Sources */,
 				0F0633182802E9C700B72652 /* SignInView.swift in Sources */,
 				00C199CA2A091C3F00732115 /* DBUserData.swift in Sources */,
-				004C421929E07076000ECC93 /* AuthViewPresenter.swift in Sources */,
+				004C421929E07076000ECC93 /* AuthViewModel.swift in Sources */,
 				003DC05429E2046100034A80 /* Config.swift in Sources */,
 				003DC04C29E2018100034A80 /* CallMediator.swift in Sources */,
 				00C199C22A05684800732115 /* SignUpView.swift in Sources */,

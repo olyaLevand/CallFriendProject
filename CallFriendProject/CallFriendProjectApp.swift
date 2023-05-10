@@ -13,7 +13,7 @@ struct CallFriendProjectApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView(contentViewPresenter: ContentViewPresenter(callMeadiator: appDelegate.callKitMediator))
+            ContentView(contentViewModel: ContentViewModel(callMeadiator: appDelegate.callKitMediator))
         }
         
     }

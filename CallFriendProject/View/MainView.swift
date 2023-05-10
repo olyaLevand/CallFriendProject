@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var presenter: MainViewPresenter
+    @ObservedObject var viewModel: MainViewModel
     
     @State var calleeName: String = ""
     @State var option: ConnectOption = .normalCall
@@ -23,7 +23,7 @@ struct MainView: View {
                     Spacer()
                     VStack(alignment: .trailing, spacing: 10){
                         Button("Log out"){
-                            presenter.logout()
+                            viewModel.logout()
                         }    .padding(.horizontal)
                             .padding(.vertical, 10)
                             .foregroundColor(.white)
@@ -35,7 +35,7 @@ struct MainView: View {
                                 NavigationLink{
                                     ActiveUsersView(activeUsers: $activeUsers)
                                         .onAppear{
-                                            presenter.getActiveUsers(completion: {users in
+                                            viewModel.getActiveUsers(completion: {users in
                                                 self.activeUsers = users
                                             })
                                         }
@@ -52,7 +52,7 @@ struct MainView: View {
                             }
                     }.padding()
                 }.padding(.bottom, 100)
-                Text("Hello, \(presenter.getUsername())")
+                Text("Hello, \(viewModel.getUsername())")
                     .foregroundColor(AppColors.darkBlueColor)
                     .font(.largeTitle)
                     .padding()
@@ -88,7 +88,7 @@ struct MainView: View {
                     .background(AppColors.darkBlueColor)
                     .cornerRadius(5)
                     .onReceive([self.option].publisher.first()) { (value) in
-                        value == .normalCall ? presenter.setCallType(.voice) : presenter.setCallType(.video)
+                        value == .normalCall ? viewModel.setCallType(.voice) : viewModel.setCallType(.video)
                     }
                 }.padding(.horizontal, 70)
                 
@@ -96,7 +96,7 @@ struct MainView: View {
                     if calleeName.isEmpty {
                         presentAlert = true
                     } else {
-                        presenter.connectButtonTapped(calleeName: calleeName)
+                        viewModel.connectButtonTapped(calleeName: calleeName)
                     }
                 }
                 .padding(.horizontal)
